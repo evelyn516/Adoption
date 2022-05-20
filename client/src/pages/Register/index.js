@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
+import Header from '../../layout/Header';
 
 function Register() {
     const navigate = useNavigate()
@@ -25,6 +26,8 @@ function Register() {
 
   return (
     <>
+    <Header/>
+
     <form onSubmit={handleSubmit}>
         <label htmlFor='username'>Enter Username: </label>
         <input type='text' id="username" onChange={(e)=>setUsername(e.target.value)}></input>

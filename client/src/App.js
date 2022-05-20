@@ -3,18 +3,18 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Header from "./layout/Header";
-import Testauth from "./pages/Testauth";
+import HomeAuth from "./pages/HomeAuth";
+import Profile from './pages/Profile';
 
 function App() {
   return (
     <>
-      <Header />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/auth" element={<Testauth />} />
+        <Route path="/homeauth" element={<HomeAuth />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   );

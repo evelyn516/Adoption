@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import { useDispatch } from "react-redux";
+import Header from '../../layout/Header';
 
 function Login() {
   const dispatch = useDispatch()
@@ -26,6 +27,7 @@ function Login() {
         headers: {'Content-Type': 'application/json'}
       })
       const content = await responseAuth.json()
+      localStorage.setItem('username', content.username)
       dispatch({
         type: "SET_USERNAME",
         value: content.username
@@ -34,10 +36,13 @@ function Login() {
   }
 
   if (redirect){
-      return navigate('/auth')
+      return navigate('/homeauth')
   }
 
   return (
+    <>
+    <Header/>
+
     <form onSubmit={handleSubmit}>
         <label htmlFor='username'>Enter Username: </label>
         <input type='text' id="username" onChange={(e)=>setUsername(e.target.value)}></input>
@@ -45,6 +50,7 @@ function Login() {
         <input type='password' id='password' onChange={(e)=>setPassword(e.target.value)}></input>
         <input type='submit' value='Login!'></input>
     </form>
+    </>
   )
 }
 
