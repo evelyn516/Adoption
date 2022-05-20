@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 
@@ -12,12 +12,12 @@ function Header() {
     })
   }
 
-
-
   let menu;
-  const username = useSelector(state => state.username)
+  const username = localStorage.getItem('username')
 
-  if (username === ''){
+
+  if (username === null){
+  
     menu = (
       <>
       <NavLink to='/'>Home</NavLink>
@@ -26,10 +26,13 @@ function Header() {
       </>
     )
   } else{
+ 
+
     menu = (
       <>
-      <NavLink to='/auth'>Home</NavLink>
-      <NavLink to='/login' onClick = {handleClick}>logout</NavLink>
+      <NavLink to='/homeauth'>Home</NavLink>
+      <NavLink to='/profile'>Edit Profile</NavLink>
+      <NavLink to='/login' onClick = {handleClick}>Logout</NavLink>
       </>
     )
   }

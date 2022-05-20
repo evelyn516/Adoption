@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
+import Header from '../../layout/Header';
 
 function Testauth() {
     const navigate = useNavigate()
@@ -29,7 +30,11 @@ function Testauth() {
       }, [])
 
   return (
+    <>
+    <Header/>
+
     <div>Testauth</div>
+    </>
   )
 }
 
