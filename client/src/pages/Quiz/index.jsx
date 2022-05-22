@@ -17,20 +17,44 @@ const [questions, setQuestions] = useState ([
 }])
 
 
-const [currentQuestion, setCurrentQuestion] = useState(3)
+const [currentQuestion, setCurrentQuestion] = useState(5)
+const [response, setResponse] = useState([])
 const nextQuetions = currentQuestion + 1;
+
+
+const handleResponse = (e) => {
+let responseItem = e.target.value
+setResponse(response.push(responseItem))
+console.log(response)
+
+}
 
   return (
 
 <>
 
-<div className="main-quiz">  
+{/* <div className="main-quiz">  
 
-<h1> {questions[currentQuestion].question}</h1>
+<h1 className="questions"> {questions[currentQuestion].question}</h1>
+{questions[currentQuestion].answers.map((answer, i) => (<button key={i} value={answer[i]} onClick={() => handleResponse()} className="answer-btn"> {answer} </button>))}
 
-{questions[currentQuestion].answers.map((answer, i) => (<button key={i}> {answer}</button>))}
+</div> */}
+<h1 className="questions"> {questions[currentQuestion].question}</h1>
 
-</div>
+<div>
+         
+          <select className="category" value={questions[currentQuestion].answers} onChange={handleResponse}>
+            
+          <option>select one answer</option>
+
+          {questions[currentQuestion].answers && questions[currentQuestion].answers.map((answer) => (
+          <option value={answer} key={answer[currentQuestion]}> {answer} </option> ))}
+
+          </select>
+
+          <br></br><button> Next Question</button>
+        </div>
+
 
 </>
 );
