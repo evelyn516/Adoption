@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Nav from './components/NavBar/NavBar';
 import Home from './pages/Home';
-import SeeAll from './pages/seeAll'
+import SeeAll from './pages/SeeAll'
 import Quiz from './pages/Quiz';
 import './App.css';
 
