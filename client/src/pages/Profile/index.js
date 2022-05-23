@@ -9,6 +9,13 @@ function Profile() {
     const [address, setAddress] = useState('')
     const [email, setEmail] = useState('')
 
+    const [retrieveUser, setRetrieveUser] = useState('')
+    const [retrieveNumber, setRetrieveNumber] = useState('')
+    const [retrieveAddress, setRetrieveAddress] = useState('')
+    const [retrieveEmail, setRetrieveEmail] = useState('')
+
+    const [refresh, setRefresh] = useState(false)
+
     useEffect(()=>{
         (
           async () =>{
@@ -33,14 +40,32 @@ function Profile() {
         ()
       }, [])
 
+
+      useEffect(()=>{
+        (
+          async () =>{
+            let username = localStorage.getItem('username')
+            const response = await fetch(`http://127.0.0.1:8000/profiles/${username}/`)
+            const content = await response.json()
+            setRetrieveAddress(content.address)
+            setRetrieveEmail(content.email)
+            setRetrieveNumber(content.number)
+            setRetrieveUser(content.name)
+          }
+        )
+        ()
+      })
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         const options = {
-            method : 'POST', 
+            method : 'PUT', 
             body: JSON.stringify({name: name, number: number, address: address, email:email}),
-            headers: {'Content-Type': 'application/json'}
+            headers: {'Content-Type': 'application/json'}, withCredentials: true
         }
-        const response = await fetch('https://hookb.in/pzVwXbq7xNFKW6N28ojr', options)
+        let username = localStorage.getItem('username')
+        await fetch(`http://127.0.0.1:8000/profiles/${username}/`, options)
+        setRefresh(!refresh)
     }
 
 
@@ -50,10 +75,10 @@ function Profile() {
 
       <div>
         <h2>Profile</h2>
-        <p>Your Organisation Name: {}</p>
-        <p>Your Organisation Number: {}</p>
-        <p>Your Shelter's Address: {}</p>
-        <p>Your Shelter's Email: {}</p>
+        <p>Your Organisation Name: {retrieveUser}</p>
+        <p>Your Organisation Number: {retrieveNumber}</p>
+        <p>Your Shelter's Address: {retrieveAddress}</p>
+        <p>Your Shelter's Email: {retrieveEmail}</p>
         </div>
         <form onSubmit={handleSubmit}>
             <label htmlFor='name'>Organisation Name</label>

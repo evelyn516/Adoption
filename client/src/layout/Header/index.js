@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 
 function Header() {
+  let menu;
+  let username; 
   const dispatch = useDispatch()
 
   const handleClick = () => {
@@ -11,13 +13,17 @@ function Header() {
       type: 'RESET'
     })
   }
-
-  let menu;
-  const username = localStorage.getItem('username')
-
-
-  if (username === null){
   
+  let usernameState = useSelector(state=> state.username)
+
+  if (usernameState){
+    username = usernameState
+  } else{
+    username = localStorage.getItem('username')
+  }
+
+
+  if (username == null || username == '' || username ==undefined){
     menu = (
       <>
       <NavLink to='/'>Home</NavLink>
@@ -25,9 +31,9 @@ function Header() {
       <NavLink to='/login'>Login</NavLink>
       </>
     )
-  } else{
- 
-
+  } else if(username){
+    console.log('changed')
+    console.log(username)
     menu = (
       <>
       <NavLink to='/homeauth'>Home</NavLink>

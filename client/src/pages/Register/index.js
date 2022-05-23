@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Header from '../../layout/Header';
+import Cookies from 'js-cookie';
 
 function Register() {
     const navigate = useNavigate()
@@ -11,12 +12,11 @@ function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const options = {
+        await fetch('http://127.0.0.1:8000/api/register/', {
             method : 'POST', 
             body: JSON.stringify({username: username, password: password, password_confirmation: confirmPass}),
             headers: {'Content-Type': 'application/json'}
-        }
-        await fetch('http://127.0.0.1:8000/api/register/', options)
+        })
         setRedirect(true)
     }
 
@@ -27,7 +27,6 @@ function Register() {
   return (
     <>
     <Header/>
-
     <form onSubmit={handleSubmit}>
         <label htmlFor='username'>Enter Username: </label>
         <input type='text' id="username" onChange={(e)=>setUsername(e.target.value)}></input>
