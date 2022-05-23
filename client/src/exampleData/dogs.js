@@ -2,7 +2,7 @@
     needs company N - No,  S - some, L - lots 
     need to include active/shedding*/
 
-dogs = [
+export const DogData = [
     {   
       "name": "Lorraine",
         "img": "https://www.battersea.org.uk/sites/default/files/animal_images/00P8e000001F57AEAS.jpeg",
@@ -66,3 +66,5 @@ dogs = [
         "home": "I can live anywhere",
         "about": "Little man Troy is an older gent who has found kennelling difficult and is stressed in kennels when on his own, and barks a lot during the day when on his own. He is much better with company and likes his food and absolutely loves tennis balls, and could play all day! He has shown to be friendly and independent with dogs and might be able to live with one if the right match.Troy need a quiet retirement home where he can relax and we cant wait to see him living his best life in his forever home."}    
   ]
+
+
