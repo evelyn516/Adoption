@@ -116,8 +116,8 @@ function App() {
       {/* <Nav /> */}
         <Routes>
           <Route path='/' exact element={<Home />} />
-          <Route path='/dogs' element={<SeeAll animals={dogs} /> } />
-          <Route path='/cats' element={<SeeAll animals={cats} />} />
+          <Route path='/dogs' element={<SeeAll animals={dogs} type='dogs' /> } />
+          <Route path='/cats' element={<SeeAll animals={cats} type='cats'/>} />
           <Route path='/quiz' element={<Quiz />} />
         </Routes>
    

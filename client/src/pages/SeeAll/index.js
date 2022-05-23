@@ -2,11 +2,17 @@ import React from "react";
 import AnimalSnapshot from "../../components/AnimalSnapshot";
 import "./style.css";
 
-const SeeAll = ({ animals }) => {
+const SeeAll = ({ animals, type }) => {
     return (
-        animals.map( animal => {
-            return <AnimalSnapshot key={animal.ref} animal={animal} />
-        })   
+        <>
+        <header className="title">
+            <h1>Meet the {type}</h1>
+        </header>
+        <main>
+        {animals.map( animal => {
+            return <AnimalSnapshot key={animal.ref} animal={animal} />})} 
+        </main>  
+        </>
     )
 }
 
