@@ -1,0 +1,32 @@
+.questions{
+text-align: center;
+margin-top: 15%;
+}
+
+.answers-grid{
+min-width: 4rem;
+min-height: 2rem;
+margin: 0 auto;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+
+}
+
+select{
+height: 2rem;
+width:15rem;
+text-align: center;
+margin-bottom: 2rem;
+
+}
+single-opt{
+text-align: center;
+
+}
+.next-q{
+    display: block;
+    height: 2rem;
+    width: 8rem;
+    margin: 0 auto;
+}
