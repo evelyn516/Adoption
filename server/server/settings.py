@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,6 +33,7 @@ CSRF_TRUSTED_ORIGINS = ['http://localhost:3000','https://*.127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'posts.apps.PostsConfig',
     'profiles.apps.ProfilesConfig',
     'users.apps.UsersConfig',
     'django.contrib.admin',
@@ -138,3 +139,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #         'rest_framework.authentication.SessionAuthentication',
 #     ]
 # }
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
