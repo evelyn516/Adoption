@@ -1,10 +1,14 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import Header from '../../layout/Header';
 
 function Home() {
+
   return (
     <>
+
      <h1 className="home-title" >Welcome to our Home Page</h1>
 <div className="btn-container">
      <ul  >
@@ -22,9 +26,12 @@ function Home() {
 
                 </div>
     </>
+=======
+      <Header/>
+      <div>Welcome to our website</div>
+      </>
+
   );
 }
-
-/* BUTTONS FOR navbar */
 
 export default Home;
