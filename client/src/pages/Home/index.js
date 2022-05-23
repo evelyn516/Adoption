@@ -25,10 +25,6 @@ function Home() {
                 </ul>
 
                 </div>
-    </>
-=======
-      <Header/>
-      <div>Welcome to our website</div>
       </>
 
   );
