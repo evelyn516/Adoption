@@ -11,7 +11,7 @@ function App() {
 
   return (
    <>
-      {/* <Nav /> */}
+      <Nav /> 
         <Routes>
           <Route path='/' exact element={<Home />} />
           <Route path='/dogs' element={<SeeAll animals={ DogData } type='dogs' /> } />
