@@ -10,7 +10,7 @@ export default function AnimalSnapshot({ animal }) {
   return (
     <div class='snapshot'>
         <h2>{animal.name}</h2>
-        {/* <img>{animal.img}</img> */}
+        <img src={animal.img} alt={animal.name} />
         <p>Age: {animal.age}</p>
         <p>Breed: {animal.breed}</p>
         <p>Sex: {animal.sex}</p>
