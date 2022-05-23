@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./style.css";
 
 function Quiz() {
@@ -19,21 +19,29 @@ const [questions, setQuestions] = useState ([
 
 const [currentQuestion, setCurrentQuestion] = useState(0)
 const [response, setResponse] = useState([])
-const nextQuetions = currentQuestion + 1;
+const [selectAnswer, setSelectAnswer] = useState("")
+// const nextQuetions = currentQuestion + 1;
 let responseItem = ''
 
 const handleResponse = (e) => {
 responseItem = e.target.value
-setResponse(response.push(responseItem))
-console.log(response)
+setResponse((state) => {
+  const newValue = [...state,responseItem]
+  console.log(newValue)
+  return newValue
+})
+setSelectAnswer(responseItem)
 
 }
 
 const nextQuestion = () => {
-  if (responseItem === "") {
+  //bug: the first question will be aways empty string so its going to show the alert aways / can the solution be a wiht a loop that runs all the statement first before testing the condition
+  if (!selectAnswer) {
     alert(" You must choose one answer to continue!")
   } else{
     setCurrentQuestion(currentQuestion + 1)
+    setSelectAnswer("")
+    // alert(response)
 
   }
 }
@@ -44,17 +52,12 @@ const nextQuestion = () => {
 
 <>
 
-{/* <div className="main-quiz">  
 
-<h1 className="questions"> {questions[currentQuestion].question}</h1>
-{questions[currentQuestion].answers.map((answer, i) => (<button key={i} value={answer[i]} onClick={() => handleResponse()} className="answer-btn"> {answer} </button>))}
-
-</div> */}
 <h1 className="questions"> {questions[currentQuestion].question}</h1>
 
 <div className="answers-grid">
          
-          <select className="category" value={questions[currentQuestion].answers} onChange={handleResponse}>
+          <select className="category"  value={selectAnswer} onChange={handleResponse}>
             
           <option className="single-opt">select one answer</option>
 
@@ -63,9 +66,8 @@ const nextQuestion = () => {
 
           </select>
         </div>
-{currentQuestion === questions.length - 1 ? ( <h1 className="questions"> All the questions answered!!!</h1>) : (<button className="next-q" onClick={() => nextQuestion()}> Next Question</button> )}
-          
-
+{currentQuestion === questions.length - 1 ? ( <h1 className="questions"> Questions answered! Link to the matching pets now</h1>) : (<button className="next-q" onClick={() => nextQuestion()}> Next Question</button> )}
+{currentQuestion === questions.length - 1 && <ul>{response.map((r) => <li>{r}</li>)}</ul>}        
 
 </>
 );
