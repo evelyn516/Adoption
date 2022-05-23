@@ -20,7 +20,6 @@ const [questions, setQuestions] = useState ([
 const [currentQuestion, setCurrentQuestion] = useState(0)
 const [response, setResponse] = useState([])
 const [selectAnswer, setSelectAnswer] = useState("")
-// const nextQuetions = currentQuestion + 1;
 let responseItem = ''
 
 const handleResponse = (e) => {
@@ -35,7 +34,7 @@ setSelectAnswer(responseItem)
 }
 
 const nextQuestion = () => {
-  //bug: the first question will be aways empty string so its going to show the alert aways / can the solution be a wiht a loop that runs all the statement first before testing the condition
+ 
   if (!selectAnswer) {
     alert(" You must choose one answer to continue!")
   } else{
@@ -62,7 +61,7 @@ const nextQuestion = () => {
           <option className="single-opt">select one answer</option>
 
           {questions[currentQuestion].answers && questions[currentQuestion].answers.map((answer) => (
-          <option className="single-opt" value={answer} key={answer[currentQuestion]}> {answer} </option> ))}
+          <option className="single-opt" value={answer} key={answer}> {answer} </option> ))}
 
           </select>
         </div>
