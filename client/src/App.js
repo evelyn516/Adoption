@@ -1,17 +1,28 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Quiz from './pages/Quiz';
+import SeeAll from './pages/SeeAll';
+import NavBar from './components/NavBar/index';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-      </header>
-    </div>
-  );
+   <>
+   {/* <NavBar /> */}
+<main>
+<Routes>
+<Route path="/" element={<Home />} />
+<Route path="/quiz" element={<Quiz />} />
+<Route path="/seeall" element={<SeeAll />} />
+
+</Routes>
+
+
+</main>
+   
+   
+   </>
+  )
 }
 
 export default App;
