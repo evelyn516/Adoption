@@ -1,4 +1,35 @@
+.name { grid-area: name;
+        text-align: center; }
+img { 
+    grid-area: img; 
+    border-radius: 8px;
+    width: 40vw;
+}
+.age { grid-area: age; }
+.breed { grid-area: breed; }
+.sex { grid-area: sex; }
+.kids { grid-area: kids; }
+.others { grid-area: others; }
+.home { grid-area: home; }
+.about { grid-area: about;
+        text-align: center; }
+
+
+
 .snapshot{
+    display: grid;
+    grid-template-areas:
+    'name name name '
+    'img age sex'
+    'img breed breed'
+    'img kids kids'
+    'img others others'
+    'img home home'
+    'about about about';
+
+    padding-left: 10px;
     border-style: solid;
     border-color: aqua;
+    border-width: 1pt;
+    margin: 10px;
 }
