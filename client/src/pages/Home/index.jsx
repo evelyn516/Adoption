@@ -9,4 +9,6 @@ function Home() {
   );
 }
 
+/* BUTTONS FOR navbar */
+
 export default Home;
