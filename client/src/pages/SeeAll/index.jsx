@@ -1,12 +1,16 @@
 import React from "react";
+import AnimalSnapshot from "../../components/AnimalSnapshot";
 import "./style.css";
 
-function SeeAll() {
+const SeeAll = ({animals }) => {
+
   return (
-    <>
-     <h1>All pets to be taken</h1>
-    </>
-  );
+      animals.map( animal => {
+          return(
+              <AnimalSnapshot key={animal.reference} animal={animal} />
+          )
+      })   
+  )
 }
 
 export default SeeAll;

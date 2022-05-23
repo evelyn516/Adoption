@@ -1,5 +1,5 @@
 import React from 'react'
-import './AnimalProfile.css'
+import './style.css'
 
 export default function AnimalSnapshot({ animal }) {
     let about = animal.about;
@@ -15,7 +15,7 @@ export default function AnimalSnapshot({ animal }) {
         <p>Breed: {animal.breed}</p>
         <p>Sex: {animal.sex}</p>
         <p>Can live with children: {animal.kids}</p>
-        <p>Can live with other pets: {}</p>
+        <p>Can live with other pets: {animal.others}</p>
         <p>{animal.home}</p>
         <p>{aboutMe}</p>
     </div>

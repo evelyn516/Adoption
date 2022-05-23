@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 function Nav() {
     const color = {color:'orange'}
 
+    /* If logged in - see profile/logout */
+    /* mobile first drop down see all/meet the pets - dogs/cats/match me! */
+
     return (
         <>
             <nav>
                 <ul>
+                    <Link style={color} to='/'>
+                        <li>Home</li>
+                    </Link>
                     <Link style={color} to='/profile'>
                         <li>Profile</li>
                     </Link>
@@ -17,7 +23,7 @@ function Nav() {
                     <Link style={color} to='/cats'>
                         <li>See cats</li>
                     </Link>
-                    <Link style={color} to='/questionnaire'>
+                    <Link style={color} to='/quiz'>
                         <li>Match me!</li>
                     </Link>
                 </ul>

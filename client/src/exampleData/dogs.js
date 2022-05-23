@@ -1,14 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
-import Nav from './components/NavBar/NavBar';
-import Home from './pages/Home';
-import SeeAll from './pages/seeAll'
-import Quiz from './pages/Quiz';
-import './App.css';
+/* training: N - No,  S - some, L - lots 
+    needs company N - No,  S - some, L - lots 
+    need to include active/shedding*/
 
-function App() {
-
-  const [dogs, setDogs] = useState([{
+dogs = {
     "Lorraine" : { 
         "name": "Lorraine",
         "img": "https://www.battersea.org.uk/sites/default/files/animal_images/00P8e000001F57AEAS.jpeg",
@@ -73,22 +67,9 @@ function App() {
         "home": "I can live anywhere",
         "about": "Little man Troy is an older gent who has found kennelling difficult and is stressed in kennels when on his own, and barks a lot during the day when on his own. He is much better with company and likes his food and absolutely loves tennis balls, and could play all day! He has shown to be friendly and independent with dogs and might be able to live with one if the right match.Troy need a quiet retirement home where he can relax and we cant wait to see him living his best life in his forever home."},
     
-}])
-
-
-  return (
-   <>
-      <Nav />
-        <Routes>
-          <Route path='/' exact element={<Home />} />
-          <Route path='/dogs' element={<SeeAll animals={dogs} /> } />
-          <Route path='/cats' element={<SeeAll animals={dogs} />} />
-          <Route path='/quiz' element={<Quiz />} />
-        </Routes>
-   
-   
-   </>
-  )
 }
 
-export default App;
+
+
+
+export default dogs;
