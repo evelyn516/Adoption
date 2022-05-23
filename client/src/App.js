@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Nav from './components/NavBar/NavBar';
 import Home from './pages/Home';
-import SeeAll from './pages/seeAll'
+import SeeAll from './pages/SeeAll'
 import Quiz from './pages/Quiz';
 import './App.css';
 
@@ -116,8 +116,8 @@ function App() {
       <Nav />
         <Routes>
           <Route path='/' exact element={<Home />} />
-          <Route path='/dogs' element={<SeeAll animals={dogs} /> } />
-          <Route path='/cats' element={<SeeAll animals={cats} />} />
+          <Route path='/dogs' element={<SeeAll animals={dogs} type='dogs' /> } />
+          <Route path='/cats' element={<SeeAll animals={cats} type='cats'/>} />
           <Route path='/quiz' element={<Quiz />} />
         </Routes>
    
