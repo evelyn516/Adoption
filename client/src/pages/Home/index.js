@@ -1,14 +1,14 @@
-import React from "react";
-import "./style.css";
+import React from 'react'
+import Header from '../../layout/Header';
 
 function Home() {
+
   return (
     <>
-     <h1>Welcome to our Home Page</h1>
-    </>
+      <Header/>
+      <div>Welcome to our website</div>
+      </>
   );
 }
-
-/* BUTTONS FOR navbar */
 
 export default Home;
