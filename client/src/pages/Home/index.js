@@ -1,5 +1,4 @@
 
-import catPic from '../../images/catPic.ico'
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -9,9 +8,7 @@ function Home() {
 
   return (
     <>
-    
-    <img alt='catty' src={catPic} />
-
+    <Header/>
      <h1 className="home-title" >Welcome to our Home Page</h1>
 <div className="btn-container">
      <ul  >

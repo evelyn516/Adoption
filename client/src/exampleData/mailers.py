@@ -1,4 +1,4 @@
-from re import L
+
 from django.core.mail import send_mail
 """
 data = data from post request
