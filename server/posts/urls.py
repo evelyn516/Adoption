@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import PostList, PostInd, DogList, CatList
+from .views import PostList, PostInd, DogList, CatList, MatchList
 
 urlpatterns = [
 	# path('upload', hotel_image_view, name = 'image_upload'),
@@ -12,6 +12,7 @@ urlpatterns = [
     path('<str:username>/', PostInd.as_view()), 
     path('animal/cats/', CatList.as_view()),
     path('animal/dogs/', DogList.as_view()), 
+    path('quiz/match/', MatchList.as_view())
 ]
 
 # if settings.DEBUG:
