@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AnimalSnapshot from "../AnimalProfile";
 
 const Collapsible = ({ open, children }) => {
     const [isOpen, setIsOpen] = useState(open);
@@ -14,7 +13,13 @@ const Collapsible = ({ open, children }) => {
             <button className='seeMore' onClick={handleFilterOpening}>
               {!isOpen  ? 'See More' : 'See Less' }</button>
                 
-              <div>{isOpen && <div className="about">{children}</div>}</div>
+              <div>
+                {isOpen && 
+                <div className="about">
+                  {children}
+                  <button>Contact Me</button>
+                </div>}
+              </div>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Collapsible from '../Collapsible';
+import ContactModal from '../Modal';
 import './style.css'
 
 export default function AnimalSnapshot({ animal }) {
@@ -16,7 +17,8 @@ export default function AnimalSnapshot({ animal }) {
         <p className='home'>{animal.home}</p>
         <Collapsible closed>
             {animal.about}
-        </Collapsible>      
+        </Collapsible> 
+        <ContactModal /> 
     </div>
   )
 };
