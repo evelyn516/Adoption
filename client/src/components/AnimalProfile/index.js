@@ -18,9 +18,9 @@ export default function AnimalSnapshot({ animal }) {
         <p className='home'>{animal.home}</p>
         <Collapsible closed>
             {animal.about}
-            {/* Shelter info! */}
+            <ContactModal /> 
         </Collapsible> 
-        <ContactModal /> 
+        <ContactModal /* petName={animal.name} ref={animal.ref} */ /> 
     </div>
   )
 };

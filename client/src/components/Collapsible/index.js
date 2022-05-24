@@ -17,7 +17,6 @@ const Collapsible = ({ open, children }) => {
                 {isOpen && 
                 <div className="about">
                   {children}
-                  <button>Contact Me</button>
                 </div>}
               </div>
     </div>
