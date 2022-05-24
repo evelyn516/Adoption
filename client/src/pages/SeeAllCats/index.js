@@ -3,7 +3,7 @@ import AnimalSnapshot from "../../components/AnimalProfile";
 import Header from "../../layout/Header";
 import "./style.css";
 
-const SeeAllCats = ({ animals, type }) => {
+const SeeAllCats = () => {
 
     const [cats, setCats] = useState('')
     
@@ -26,7 +26,7 @@ const SeeAllCats = ({ animals, type }) => {
         <>
         <Header/>
         <header className="title">
-            <h1>Meet the {type}</h1>
+            <h1>Meet the Cats</h1>
         </header>
         <main>
         {cats && cats.map( animal => {
