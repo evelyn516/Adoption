@@ -3,7 +3,7 @@ import './style.css'
 
 export default function AnimalSnapshot({ animal }) {
     let about = animal.about;
-    let aboutMe = about.split('\.', 1)[0] + ".";
+    let aboutMe = about.split('.', 1)[0] + ".";
 
   return (
     <div className='snapshot'>
