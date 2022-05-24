@@ -33,9 +33,4 @@ function Home() {
   );
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 6d65867f78fa1a38a97405f591dea849c09d756a
 export default Home;

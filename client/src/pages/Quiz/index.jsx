@@ -11,7 +11,7 @@ const [questions, setQuestions] = useState ([
   {question:'Do you have other pets?', answers: ['yes - a cat', 'yes - a dog', 'nope']},
   {question:'Do you have a fenced-in garden?', answers: ['yes', 'no - but there\'s green space close-by', 'no - I live in the city']},
   {question:'How much time will your pet have to spend alone', answers: ['none - wfh', 'some - but I can arrange care', 'reasonable - I work a lot']},
-  {question:'Would you be able to take a pet that needs extra training?', answers: ['nope', 'minor', 'some', 'I like a challenge']},
+  {question:'Would you be able to take a pet that needs extra training?', answers: ['nope', 'minor', 'some', 'I like a challenge']}
 ])
 
 
@@ -64,7 +64,7 @@ const nextQuestion = () => {
           </select>
         </div>
 {currentQuestion === questions.length - 1 ? ( <h1 className="questions"> Questions answered! Link to the matching pets now</h1>) : (<button className="next-q" onClick={() => nextQuestion()}> Next Question</button> )}
-{currentQuestion === questions.length - 1 && <ul>{response.map((r) => <li>{r}</li>)}</ul>}        
+{currentQuestion === questions.length -1 && <ul>{response.map((r) => <li>{r}</li>)}</ul>}        
 
 </>
 );
