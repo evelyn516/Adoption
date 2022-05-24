@@ -4,7 +4,7 @@ import SeeAllDogs from './pages/SeeAllDogs'
 import SeeAllCats from './pages/SeeAllCats'
 import Quiz from './pages/Quiz';
 import './App.css';
-
+import Nav from './components/NavBar/NavBar';
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HomeAuth from "./pages/HomeAuth";
@@ -16,7 +16,7 @@ function App() {
   return (
 
    <>
-      {/* <Nav /> */}
+      {/* <Nav />  */}
         <Routes>
           <Route path='/' exact element={<Home />} />
           <Route path="/login" element={<Login />} />
