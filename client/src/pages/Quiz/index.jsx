@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import Header from "../../layout/Header";
 import "./style.css";
 
 function Quiz() {
-const [questions, setQuestions] = useState ([
+
+const questions = [
   {question:'What kind of animal are you looking for?', answers: ['cat', 'dog', 'I don\'t mind!']},
   {question:'Big or small?', answers: ['small', 'medium', 'big', 'size doesn\'t matter!' ]},
   {question:'Are you an active person?', answers: ['couch potato', 'reasonably', 'very']},
@@ -14,8 +16,7 @@ const [questions, setQuestions] = useState ([
   {question:'How much time will your pet have to spend alone', answers: ['none - wfh', 'some - but I can arrange care', 'reasonable - I work a lot']},
   {question:'Would you be able to take a pet with some behavioural issues that needs extra training?', answers: ['nope', 'minor', 'some', 'I like a challenge']},
   {question:'Can you tolerate some damage to your furniture and clothes until your pet is trained?', answers: ['nope', 'a little', 'I don\'t mind']
-}])
-
+}]
 
 const [currentQuestion, setCurrentQuestion] = useState(0)
 const [response, setResponse] = useState([])
@@ -51,7 +52,7 @@ const nextQuestion = () => {
 
 <>
 
-
+<Header/>
 <h1 className="questions"> {questions[currentQuestion].question}</h1>
 
 <div className="answers-grid">

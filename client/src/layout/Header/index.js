@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 
@@ -23,7 +23,7 @@ function Header() {
   }
 
 
-  if (username == null || username == '' || username ==undefined){
+  if (username === null || username === '' || username ===undefined){
     menu = (
       <>
       <NavLink to='/'>Home</NavLink>
@@ -32,13 +32,11 @@ function Header() {
       </>
     )
   } else if(username){
-    console.log('changed')
-    console.log(username)
     menu = (
       <>
       <NavLink to='/homeauth'>Home</NavLink>
       <NavLink to='/profile'>Edit Profile</NavLink>
-      <NavLink to='/login' onClick = {handleClick}>Logout</NavLink>
+      <NavLink to='/' onClick = {handleClick}>Logout</NavLink>
       </>
     )
   }
