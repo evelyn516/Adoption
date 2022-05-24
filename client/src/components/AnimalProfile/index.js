@@ -1,9 +1,9 @@
 import React from 'react'
+import Collapsible from '../Collapsible';
+import ContactModal from '../Modal';
 import './style.css'
 
 export default function AnimalSnapshot({ animal }) {
-    let about = animal.about;
-    let aboutMe = about.split('\.', 1)[0] + ".";
 
   return (
     <div className='snapshot'>
@@ -15,7 +15,11 @@ export default function AnimalSnapshot({ animal }) {
         <p className='kids'>Can live with children: {animal.kids}</p>
         <p className='others'>Can live with other pets: {animal.others}</p>
         <p className='home'>{animal.home}</p>
-        <p className='about'>{aboutMe}</p>
+        <Collapsible closed>
+            {animal.about}
+            <ContactModal /> 
+        </Collapsible> 
+        <ContactModal /* petName={animal.name} ref={animal.ref} */ /> 
     </div>
   )
-}
+};

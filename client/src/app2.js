@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HomeAuth from "./pages/HomeAuth";
-import Profile from './pages/Profile';
+import Profile from './pages/ShelterProfile';
 
 function shelterApp() {
   return (

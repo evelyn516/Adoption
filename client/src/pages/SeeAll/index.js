@@ -1,5 +1,5 @@
 import React from "react";
-import AnimalSnapshot from "../../components/AnimalSnapshot";
+import AnimalSnapshot from "../../components/AnimalProfile";
 import "./style.css";
 
 const SeeAll = ({ animals, type }) => {
