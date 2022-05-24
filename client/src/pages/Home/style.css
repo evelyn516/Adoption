@@ -12,8 +12,8 @@ justify-content: center;
 }
 
 li{
-padding: 1rem;
 font-size: 1.5rem;
+padding: 1rem;
 display: inline-block;
 width: 12rem;
 height: 2rem;

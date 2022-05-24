@@ -22,13 +22,13 @@ function Home() {
                         <li className="list-btn">See all cats</li>
                     </Link>
                     <Link  to='/quiz'>
-                        <li className="list-btn">Compatability Quiz</li>
+                        <li className="list-btn">Compatibility Quiz</li>
                     </Link>
       
                 </ul>
 
                 </div>
-      </>
+
 
   );
 }
