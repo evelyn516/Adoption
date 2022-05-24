@@ -49,7 +49,6 @@ from rest_framework import permissions
 
 class PostList(APIView):
     permission_classes = (permissions.AllowAny, )
-
     def post(self, request, format = None):
         print('called')
         serializer = PostsSerializer(data = request.data)
@@ -68,4 +67,34 @@ class PostInd(APIView):
     def get(self, request, username, format=None):
         posts = self.get_object(username)
         serializer = PostsSerializer(posts, many=True)
+        return Response(serializer.data)
+
+class DogList(APIView):
+    permission_classes = (permissions.AllowAny, )
+    def get_object(self, animal):
+        try:
+            return Posts.objects.filter(q1=animal)
+        except Posts.DoesNotExist:
+            raise Http404
+
+    def get(self, request, format= None):  
+        print(self, request)
+        dogs = self.get_object('Dog')
+        serializer = PostsSerializer(dogs, many=True)
+        return Response(serializer.data)
+
+class CatList(APIView):
+    permission_classes = (permissions.AllowAny, )
+    def get_object(self, animal):
+        try:
+            print('hello')
+            return Posts.objects.filter(q1=animal)
+        except Posts.DoesNotExist:
+            raise Http404
+
+    def get(self, request, format= None):  
+        print(self, request)
+        cats = self.get_object('Cat')
+        print(cats)
+        serializer = PostsSerializer(cats, many=True)
         return Response(serializer.data)
