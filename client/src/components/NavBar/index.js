@@ -6,8 +6,8 @@ function NavBar() {
   return (
     <>
       <nav className="nav-bar">
-        <Link>Shelter Login</Link>
-        <Link>Shelter Register</Link>
+        <Link role="loginLink">Shelter Login</Link>
+        <Link role="registerLink">Shelter Register</Link>
       </nav>
     </>
   );
