@@ -2,21 +2,25 @@
 
 body{
 background-color: #A1DCE4; 
-/* padding: 2rem; */
+
 }
 
 .home-title{
 font-size: 3rem;
+margin-top: 3rem;
+margin-bottom: 2rem;
 text-align: center;
 font-family: 'Modak', cursive;
 color: #F3A633;
+
 }
 .btn-container{
 display: flex;
-flex-direction: row;
+flex-direction: column;
 }
 .dog-img{
 width: 6rem;
+margin-bottom: 1rem;
 transition: all 0.5s;
 }
 .dog-img:hover{
@@ -27,6 +31,7 @@ transform: scale(1.5);
 
 .cat-img{
 width: 6.5rem;
+margin-bottom: 1rem;
 
 transition: all 0.5s;
 }
@@ -35,16 +40,10 @@ transition: all 0.5s;
 transform: scale(1.5);
 }
 
-
-
-
-ul{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-
+.links-to{
+text-decoration: none;
 }
+
 
 .list-btn{
 
@@ -52,7 +51,7 @@ display: inline-block;
 font-size: 3rem;
 list-style-type: none;
 text-decoration: none;
-text-align: center;
+font-family: 'Indie Flower', cursive;
 
 
 }
@@ -64,4 +63,70 @@ display: flex;
 
 a{
 text-align: center;  
+}
+
+
+.footer{
+display: flex;
+flex-direction: column;
+margin-top: 4.5rem;
+}
+.foot-item{
+margin-bottom: 0.2rem;
+font-size: 2rem;
+width: 100vw;
+height: 8vh;
+list-style-type: none;
+text-decoration: none;
+font-family: 'Indie Flower', cursive;
+
+}
+
+.first{
+    background-color: #F3A633;
+    position: relative;
+    line-height: 8vh; 
+   color:#6D6A62;
+   font-weight: bolder;
+}
+
+.second{
+    background-color: #6D6A62;
+    position: relative;
+    line-height: 8vh; 
+    color: #EB5EA9; 
+    font-weight: bolder;
+}
+
+.third{
+    background-color: #EB5EA9;
+    position: relative;
+    line-height: 8vh;
+    color: #ee9b00;
+    font-weight: bolder;
+    
+}
+
+.first:hover {background-color:#ffd60a  }
+
+.first:active {
+  background-color: #ee9b00 ;
+  box-shadow: 0 5px #eae2b7;
+  transform: translateY(6px);
+}
+
+.second:hover {background-color:#979dac  }
+
+.second:active {
+  background-color: #7d8597 ;
+  /* box-shadow: 0 5px #eae2b7; */
+  transform: translateY(6px);
+}
+
+.third:hover {background-color:#ff8fab }
+
+.third:active {
+  background-color: #ff8fab ;
+  /* box-shadow: 0 5px #eae2b7; */
+  transform: translateY(6px);
 }

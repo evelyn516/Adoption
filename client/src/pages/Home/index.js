@@ -20,8 +20,7 @@ return (
 
 <div className="btn-container">
 
-     <ul>
-
+     
         <Link  to='/cats'>
           <li className="list-btn"> <img  src={all_cats} alt="cat" className="cat-img" /> </li>
         </Link>
@@ -30,14 +29,27 @@ return (
           <li className="list-btn"> <img  src={all_dogs} alt="dogs" className="dog-img" /></li>
         </Link>
 
-        <Link  to='/quiz'>
-          <li className="list-btn"> Compatability Quiz</li>
-        </Link>  
+        
 
-      </ul>
+      
 
  </div>
-  
+  <div className="footer">
+  <Link className="links-to"  to='/quiz'>
+          <li className="foot-item first"> Adoption Quiz</li>
+        </Link>  
+
+
+  <Link className="links-to" to='/quiz'>
+          <li className="foot-item second"> Shelter Register</li>
+  </Link>
+
+  <Link className="links-to"  to='/login'>
+          <li className="foot-item third"> Shelter login </li>
+  </Link>
+                    
+ 
+  </div>
 
 </>
 
