@@ -13,7 +13,7 @@ export default function ContactModal({username, api}) {
   useEffect(()=>{
     (
       async () =>{
-        const response = await fetch(`${api}${username}/`)
+        const response = await fetch(`${api}posts/${username}/`)
         const content = await response.json()
         console.log(content)
         setProfileData(content)
