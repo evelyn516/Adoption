@@ -33,6 +33,7 @@ CSRF_TRUSTED_ORIGINS = ['http://localhost:3000','https://*.127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'send.apps.SendConfig',
     'posts.apps.PostsConfig',
     'profiles.apps.ProfilesConfig',
     'users.apps.UsersConfig',
@@ -142,3 +143,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'c262eedde498a5'
+EMAIL_HOST_PASSWORD = '0d55abe3f11686'
+EMAIL_PORT = '2525'

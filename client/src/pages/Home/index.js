@@ -10,10 +10,9 @@ function Home() {
 
 return (
 <>
-
+<Header/>
 
 <h1 className="home-title"> Welcome to our Home Page </h1>
-<img src="./public/cats_dogs8.png" /> 
 <div className="btn-container">
      <ul>
                     <Link  to='/dogs'>

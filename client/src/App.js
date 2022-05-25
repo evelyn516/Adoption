@@ -10,6 +10,7 @@ import Register from "./pages/Register";
 import HomeAuth from "./pages/HomeAuth";
 import ShelterProfile from './pages/ShelterProfile';
 import Modal from './modal/HomeAuth';
+import MatchResults from './pages/MatchResults';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/dogs' element={<SeeAllDogs/> } />
           <Route path='/cats' element={<SeeAllCats/>} />
           <Route path='/quiz' element={<Quiz />} />
+          <Route path='/match' element={<MatchResults/>}/>
         </Routes>
    
    
