@@ -1,8 +1,7 @@
 import { default as Collapsible } from '.';
-import '@testing-library/jest-dom'
 import { screen, render, fireEvent } from '@testing-library/react';
 
-describe('Animal Snapshot', () => {
+describe('Collapsible', () => {
     let TestAbout = "Troy is an older gent."
 
     beforeEach(() => {
