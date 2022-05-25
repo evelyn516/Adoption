@@ -1,0 +1,33 @@
+ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.horizontal li a.active {
+    background-color: #04AA6D;
+}
+
+ul.horizontal li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size:20px;
+    margin-left: auto;
+}
+
+.horizontal { 
+    display:flex;
+}
+
+.rightli{
+    float: "right"
+}
+
+nav{
+    width:100%;
+}

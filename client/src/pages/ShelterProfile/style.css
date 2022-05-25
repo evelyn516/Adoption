@@ -1,0 +1,54 @@
+  /* Full-width inputs */
+
+.profileContainer > input[type=text], .profileContainer> input[type=tel], .profileContainer> input[type=textarea], .profileContainer> input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+
+
+  /* Bordered form */
+.profilePage {
+    border: 3px solid #f1f1f1;
+    border-radius: 8%;
+    width:90%;
+    margin:auto;
+    color:white;
+    background-color: grey;
+    font-size:15px;
+    margin-top: 25px;
+  }
+  
+  
+  
+  /* Set a style for all buttons */
+  #root > form.profilePage > div > button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  #root > form:nth-child(3) > div:nth-child(2) > button:hover {
+    opacity: 0.8;
+  }
+  
+
+  
+  /* Add padding to containers */
+  .profileContainer {
+    padding: 0px 16px 16px 16px;
+    background-color:'#f1f1f1'
+  }
+  
+.current_profile{
+    margin-left:10px;
+}

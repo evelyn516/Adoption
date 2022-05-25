@@ -14,7 +14,7 @@ return (
 
 <h1 className="home-title"> Welcome to our Home Page </h1>
 <div className="btn-container">
-     <ul>
+     <ul className="homeBtns">
                     <Link  to='/dogs'>
                     <li className="list-btn"> See all dogs </li>
                     </Link>

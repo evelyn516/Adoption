@@ -1,0 +1,65 @@
+/* Bordered form */
+.loginPage {
+    border: 3px solid #f1f1f1;
+    border-radius: 8%;
+    width:80%;
+    margin:auto;
+    color:white;
+    background-color: grey;
+    font-size:15px;
+    margin-top: 50px;
+  }
+  
+  /* Full-width inputs */
+  .loginContainer > input[type=text], #password {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  #root > form:nth-child(3) > div:nth-child(2) > button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 0px 0;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  /* Add padding to containers */
+  .loginContainer {
+    padding: 0px 16px 16px 16px;
+    background-color:'#f1f1f1'
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+  }
+
+  .remember_forgot{
+      padding-top: 20px;
+  }

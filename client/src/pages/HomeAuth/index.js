@@ -63,9 +63,8 @@ function Testauth() {
   return (
     <>
     <Header/>
-    <button onClick={handleButton} >Add An Animal</button>
-    <div>Testauth</div>
-    <div style={{position: 'fixed'}} ><Modal toggle={modal}/></div>
+    <button onClick={handleButton} >{modal ? 'Close Tab' : 'Add An Animal'}</button>
+    <div  ><Modal toggle={modal} setModal={setModal}/></div>
     <div>
       {renderRows()}
     </div>

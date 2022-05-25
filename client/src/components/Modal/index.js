@@ -45,18 +45,24 @@ export default function ContactModal({username}) {
         onClose={handleClose}>
         <div className='modalBox'>
           <div>
-            <h3>Email me!</h3>
+            <h3>Shelter Information</h3>
           </div>
-          <p>Organisation Name: {profileData.name}</p>
-          <p>Organisation Number: {profileData.number}</p>
-          <p>Organisation Address: {profileData.address}</p>
-          <form className='emailForm' onSubmit={handleSubmit}>
-            <label id="emailAddressLabel">Your email address:</label>
-            <input type="text" id="emailAddress" name="emailAddress" placeholder='from@example.com'/>
-            <label id="emailContentLabel">email content</label>
-            <textarea type="text" id="emailContent" name="emailContent" placeholder='Please write your questions here'/>
-            <input type="submit" />
-          </form>
+          <p>Name: {profileData.name}</p>
+          <p>Number: {profileData.number}</p>
+          <p>Address: {profileData.address}</p>
+
+      <form className='loginPage' onSubmit={handleSubmit}>
+        <div className="loginContainer">
+          <label id="emailAddressLabel">Your email address:</label>
+          <input type="text" id="emailAddress" name="emailAddress" placeholder='from@example.com'/>
+
+          <label id="emailContentLabel">email content</label>
+          <textarea type="text" id="emailContent"  name="emailContent" placeholder='Please write your questions here'/>
+
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
         </div>
       </Modal>
     </div>
