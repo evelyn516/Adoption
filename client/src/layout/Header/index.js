@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
+import './style.css'
 
 function Header() {
   let menu;
@@ -26,25 +27,29 @@ function Header() {
   if (username === null || username === '' || username ===undefined){
     menu = (
       <>
-      <NavLink to='/'>Home</NavLink>
-      <NavLink to='/register'>Register</NavLink>
-      <NavLink to='/login'>Login</NavLink>
+      <li><NavLink to='/'>Home</NavLink></li>
+      <li><NavLink to='/login'>Login</NavLink></li>
+      <li><NavLink to='/register'>Register</NavLink></li>
       </>
     )
   } else if(username){
     menu = (
       <>
-      <NavLink to='/homeauth'>Home</NavLink>
-      <NavLink to='/profile'>Edit Profile</NavLink>
-      <NavLink to='/' onClick = {handleClick}>Logout</NavLink>
+      <li><NavLink to='/homeauth'>Home</NavLink></li>
+      <li><NavLink to='/profile'>Edit Profile</NavLink></li>
+      <li><NavLink to='/' onClick = {handleClick}>Logout</NavLink></li>
       </>
     )
   }
 
   return (
+    <>
     <nav>
-        {menu}
+      <ul className='horizontal'>
+          {menu}
+      </ul>
     </nav>
+    </>
   )
 }
 
