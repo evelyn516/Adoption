@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Indie+Flower&display=swap');
 
 body{
-    padding:0px;
+    padding:0;
     margin:0px;
-    height: 100vh;
-    width:100vw; 
     font-family: 'Indie Flower', cursive;
 }
 
 .questions-grid{
-height: 100vh;
+
+
+height: 80vh;
+width: 100vw;
+
 background-color: #F3A633;
-margin-top: 12rem;
-display: flex; 
-flex-direction: column;  
+/* margin-top: 12rem; */
+/* display: flex; 
+flex-direction:column;  */
+
+align-items: flex-start
+; 
 }
 
 *, *::after, *::before{
@@ -21,53 +26,74 @@ box-sizing: border-box;
 }
 
 .questions{
+
 text-align: center;
-margin-top: 15%;
-font-size: 5rem;
+margin-top: 20%;
+margin-bottom: 15%;
+font-size: 3rem;
+
+}
+.answers-grid{
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 10%;
 }
 
-.answers-grid{
 
-min-width: 4rem;
-min-height: 2rem;
+.answers-show{
+width: 25rem;
 margin: 0 auto;
-display: flex;
-align-items: flex-start;
+/* display: flex;
+flex-direction: column;
 justify-content: center;
-
+text-align: center; */
 }
 
 
 select{
-height: 6rem;
-width:40rem;
+height: 2rem;
+width:7rem;
 text-align: center;
 margin-bottom: 2rem;
 outline: none;
 border-radius: 5px;
-font-size: 4rem;
+font-size: 1rem;
 font-family: 'Indie Flower', cursive;
 
 }
 option:nth-child(1), option:nth-child(4) {
-    font-weight:bold;
-    color: green;
+font-weight:bold;
+color: green;
 }
 
 single-opt{
 text-align: center;
 background-color: green;
+margin-bottom: 4rem;
 
 
 
 }
 .next-question{
-   
-    display: block;
-    width: 25rem;
-    border-radius: 1rem;
-    margin: 0 auto;
-    font-family: 'Indie Flower', cursive;
-    font-size: 3rem;
+display: block;
+text-align: center;
+width: 8rem;
+border-radius: 0.5rem;
+font-family: 'Indie Flower', cursive;
+font-size: 1rem;
+    
 }
+.img-container{
+width: 80vw;
+height: 35vh;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
 
+}
+.little-cat-img{
+width: 10rem;
+}

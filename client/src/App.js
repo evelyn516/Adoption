@@ -11,6 +11,7 @@ import ShelterProfile from './pages/ShelterProfile';
 import Modal from './modal/HomeAuth';
 import { DogData } from './exampleData/dogs'
 import { CatData } from './exampleData/cats'
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/dogs' element={<SeeAll animals={ DogData } type='dogs' /> } />
           <Route path='/cats' element={<SeeAll animals={CatData} type='cats'/>} />
           <Route path='/quiz' element={<Quiz />} />
+          <Route path='/footer' element={<Footer />} />
         </Routes>
    
    

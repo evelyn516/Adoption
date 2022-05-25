@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Header from "../../layout/Header";
+import little_cat from './little_cat.png'
 import "./style.css";
 
 function Quiz() {
@@ -51,8 +52,10 @@ const nextQuestion = () => {
 
 <>
 
-<Header/>
+{/* <Header/> */}
 <section className="questions-grid">
+
+
 <h1 className="questions"> {questions[currentQuestion].question}</h1>
 
 <div className="answers-grid">
@@ -67,13 +70,20 @@ const nextQuestion = () => {
           </select>
  </div>
 
- <div className="answer-show"> 
+<div className="answers-show"> 
  
-{currentQuestion === questions.length   ? ( <h1 className="questions"> Questions answered! Link to the matching pets now</h1>) : (<button className="next-question" onClick={() => nextQuestion()}> Next Question</button> )}
-{currentQuestion === questions.length  &&  <ul>{response.map((r) => <li>{r}</li>)}</ul>}        
+{currentQuestion === questions.length  ? ( <h1 className="questions"> Questions answered! Link to the matching pets now</h1>) : (<button className="next-question" onClick={() => nextQuestion()}> Next Question</button> )}
+{currentQuestion === questions.length  &&  <ul>{response.map((r) => <li>{r}</li>)}</ul>}    
 
 </div>
+
+<div className="img-container">
+
+<img src={little_cat} alt="little_cat" className="little-cat-img"/>
+</div>
+
 </section>
+
 </>
 );
 
