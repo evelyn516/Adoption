@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Indie+Flower&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 /* 
 --marigold : #f3a633ff;
 --white: #ffffffff;
@@ -11,7 +13,7 @@ body{
     /* background-color: #a1dce4ff; */
     /* color: #6d6a62ff; */
     align-items: center;
-    
+    font-family: 'Montserrat', sans-serif;    
 }
 
 
@@ -32,20 +34,45 @@ main{
 img { 
     grid-area: img; 
     width:100%;
-}
-.messageMe{
-    grid-area: message;
-    border-bottom: 2pt solid;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    /* media query needed here */
 }
 .age { grid-area: age; }
 .breed { grid-area: breed; }
 .sex { grid-area: sex; }
-.kids { grid-area: kids; }
-.others { grid-area: others; }
+.kids { grid-area: kids; 
+    padding: 20pt;}
+.others { grid-area: others;
+    padding: 10pt; }
 .home { grid-area: home; }
 .about { grid-area: about;}
-/* .modalButton{ grid-area: modalButton; }
-.seeMore{ grid-area: seeMore; } */
+.modalButton{ 
+    display: flex;
+    grid-area: modalButton;
+    align-items: right; }
+.seeMore{ grid-area: seeMore; }
+.collapsible{
+    grid-area: collapsible;
+    width: 100%;
+}
+.messageTitle{ grid-area: title;}
+.message{ grid-area: sell;}
+.messageMe{
+    display: grid;
+    text-align: left;
+    grid-area: message;
+    grid-template-areas:
+    'title title title modalButton'
+    'sell sell sell sell';
+    border-bottom: 2pt solid;
+    padding-left: 10pt;
+}
+.modal{
+    border-bottom: 2pt solid;
+    
+}
 
 .snapshot{
     text-align: center;
@@ -54,11 +81,11 @@ img {
     'name name name name'
     'img img img img'
     'img img img img'
-    'message message message message'
+    'message message message modalButton'
     'age sex breed breed'
     'kids kids others others'
     'home home home home'
-    'about about about about';
+    'collapsible collapsible collapsible collapsible';
 
     background-color: #ffffffff;
     border: 2pt solid rgb(242, 38, 113);
@@ -68,3 +95,12 @@ img {
 }
 
 /* img centre */
+
+button{
+    background-color: #f3a633ff;
+    border: none;
+    font-size: 25px;
+    padding: 6pt 10pt;
+    border-radius: 8px;
+}
+

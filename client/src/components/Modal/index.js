@@ -12,7 +12,7 @@ export default function ContactModal(petName = "Troy", ref = 32) {
 
   return (
     <div className='modal'>
-      <button onClick={handleOpen}>Contact Me</button>
+      <button className='modalButton' onClick={handleOpen}>Contact Me</button>
       <Modal
         open={open}
         onClose={handleClose}>
