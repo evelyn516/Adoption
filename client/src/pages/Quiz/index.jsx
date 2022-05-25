@@ -52,6 +52,7 @@ const nextQuestion = () => {
 <>
 
 <Header/>
+<section className="questions-grid">
 <h1 className="questions"> {questions[currentQuestion].question}</h1>
 
 <div className="answers-grid">
@@ -72,6 +73,7 @@ const nextQuestion = () => {
 {currentQuestion === questions.length  &&  <ul>{response.map((r) => <li>{r}</li>)}</ul>}        
 
 </div>
+</section>
 </>
 );
 

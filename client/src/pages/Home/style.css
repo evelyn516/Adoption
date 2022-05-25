@@ -1,4 +1,21 @@
+body{
+    background-color: #A1DCE4; 
+}
+.dog-img{
+width: 26rem;
+margin-top: 8rem;
+}
+
+
+.cat-img{
+width: 26rem;
+margin-top: 8rem;
+}
+
+
+
 .home-title{
+font-size: 4rem;
 text-align: center;
 margin-top: 10rem;
 margin-bottom: 4rem;
@@ -6,21 +23,19 @@ margin-bottom: 4rem;
 
 ul{
 display: flex;
+flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: space-between;
 
 }
 
 .list-btn{
-padding: 1rem;
-font-size: 1.5rem;
+
 display: inline-block;
-width: 12rem;
-height: 2rem;
+font-size: 5rem;
 list-style-type: none;
 text-decoration: none;
-border: solid 1px black;
-margin: 0 2rem;
+margin: 2rem 2rem;
 text-align: center;
 
 
