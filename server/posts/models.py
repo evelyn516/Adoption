@@ -17,8 +17,6 @@ class Posts(models.Model):
     q6 = models.CharField(max_length=255, default= 'None')
     q7 = models.CharField(max_length=255, default= 'None')
     q8 = models.CharField(max_length=255, default= 'None')
-    q9 = models.CharField(max_length=255, default= 'None')
-    q10 = models.CharField(max_length=255, default= 'None')
     username = models.CharField(max_length=255, default= 'None')
 
     def __str__(self):

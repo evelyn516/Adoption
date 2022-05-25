@@ -26,6 +26,7 @@ urlpatterns = [
     path('api/', include('users.urls')), 
     path('profiles/', include('profiles.urls')),
     path('posts/', include('posts.urls')),
+    path('send/', include('send.urls'))
 ]
 
 # if settings.DEBUG:
