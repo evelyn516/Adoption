@@ -10,7 +10,7 @@ const Collapsible = ({ open, children }) => {
 
   return (
     <div className='collapsible'>
-            <button onClick={handleFilterOpening} className='seeMore'>
+            <button className='seeMore' onClick={handleFilterOpening}>
               {!isOpen  ? 'See More' : 'See Less' }</button>
                 
               <div>
