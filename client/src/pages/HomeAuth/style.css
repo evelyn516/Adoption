@@ -1,0 +1,14 @@
+
+body {
+    text-align: center;
+}
+
+#OrgHeader {
+    font-size: 215%;
+    text-align: center;
+}
+
+.OrgPosts {
+    border: 15px black;
+    padding: 5% 10% 5% 10%;
+}
