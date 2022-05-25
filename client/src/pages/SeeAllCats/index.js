@@ -3,11 +3,9 @@ import AnimalSnapshot from "../../components/AnimalProfile";
 import Header from "../../layout/Header";
 import "./style.css";
 
-const SeeAllCats = () => {
+const SeeAllCats = ({api}) => {
 
     const [cats, setCats] = useState('')
-
-    const api = 'https://lap4-test.herokuapp.com/';
     
     useEffect(()=>{
     (
@@ -32,7 +30,7 @@ const SeeAllCats = () => {
         </header>
         <main>
         {cats && cats.map( (animal, i) => {
-            return <AnimalSnapshot key={i} animal={animal} />})} 
+            return <AnimalSnapshot key={i} animal={animal} api={api} />})} 
         </main>  
         </>
     )

@@ -3,14 +3,12 @@ import {useNavigate} from 'react-router-dom'
 import Header from '../../layout/Header';
 import Cookies from 'js-cookie';
 
-function Register() {
+function Register({api}) {
     const navigate = useNavigate()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPass, setConfirmPass] = useState('')
     const [redirect, setRedirect] = useState(false)
-
-    const api = 'https://lap4-test.herokuapp.com/';
 
     const handleSubmit = async (e) => {
         e.preventDefault()

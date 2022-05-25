@@ -5,14 +5,12 @@ import Header from '../../layout/Header';
 import Cookies from 'js-cookie';
 
 
-function Login() {
+function Login({api}) {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [redirect, setRedirect] = useState(false)
-
-  const api = 'https://lap4-test.herokuapp.com/';
 
     const handleSubmit = async (e) => {
       e.preventDefault()

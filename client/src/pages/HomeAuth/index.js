@@ -3,12 +3,10 @@ import {useNavigate} from 'react-router-dom'
 import Header from '../../layout/Header';
 import Modal from '../../modal/HomeAuth';
 
-function Testauth() {
+function Testauth({api}) {
     const navigate = useNavigate()
     const [modal, setModal] = useState(false)
     const [list, setList] = useState([])
-
-    const api = 'https://lap4-test.herokuapp.com/';
     
     useEffect(()=>{
         (
@@ -68,7 +66,7 @@ function Testauth() {
     <Header/>
     <button onClick={handleButton} >Add An Animal</button>
     <div>Testauth</div>
-    <div style={{position: 'fixed'}} ><Modal toggle={modal}/></div>
+    <div style={{position: 'fixed'}} ><Modal api={api} toggle={modal}/></div>
     <div>
       {renderRows()}
     </div>

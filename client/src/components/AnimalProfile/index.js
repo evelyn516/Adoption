@@ -3,7 +3,7 @@ import Collapsible from "../Collapsible";
 import ContactModal from "../Modal";
 import "./style.css";
 
-export default function AnimalSnapshot({ animal }) {
+export default function AnimalSnapshot({ animal, api }) {
   console.log(animal)
 
 
@@ -26,7 +26,7 @@ export default function AnimalSnapshot({ animal }) {
       <p className="kids">Would you be able to take a pet that needs extra training: {animal.q8}</p>
       <p className="home">{animal.home}</p>
       </div>
-      <ContactModal username = {animal.username}/>
+      <ContactModal username={animal.username} api={api}/>
       <Collapsible closed>
       <p className="Description">Description: {animal.description}</p>
       </Collapsible>

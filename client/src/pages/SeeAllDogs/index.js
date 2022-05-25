@@ -3,11 +3,9 @@ import AnimalSnapshot from "../../components/AnimalProfile";
 import Header from "../../layout/Header";
 import "./style.css";
 
-const SeeAllDogs = () => {
+const SeeAllDogs = ({api}) => {
 
     const [dogs, setDogs] = useState('')
-
-    const api = 'https://lap4-test.herokuapp.com/';
     
     useEffect(()=>{
     (
@@ -32,7 +30,7 @@ const SeeAllDogs = () => {
         </header>
         <main>
         {dogs && dogs.map( animal => {
-            return <AnimalSnapshot key={animal.ref} animal={animal} />})} 
+            return <AnimalSnapshot key={animal.ref} animal={animal} api={api} />})} 
         </main>  
         </>
     )

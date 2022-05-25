@@ -6,7 +6,7 @@ import {useSelector } from "react-redux";
 
 /* fetch data matches */
 
-const MatchResults = () => {
+const MatchResults = ({api}) => {
     console.log('hello')
     let animals = useSelector((state)=> state.quizData)
     console.log(animals)
@@ -19,7 +19,7 @@ const MatchResults = () => {
         {animals.map((animal, i) => {
             return (
                 <>
-                <AnimalSnapshot key={i} animal={animal} />
+                <AnimalSnapshot key={i} animal={animal} api={api} />
                 <Matchability key={i} score={animal.score} />
                 </>
             )})} 

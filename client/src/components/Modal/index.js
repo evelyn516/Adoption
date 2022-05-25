@@ -3,14 +3,12 @@ import { Modal } from '@mui/material';
 import './style.css'
 /* drawer and paper imports for styling  */
 
-export default function ContactModal({username}) {
+export default function ContactModal({username, api}) {
   const [open, setOpen] = useState(false);
   const [profileData, setProfileData] = useState([])
   
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
-  const api = 'https://lap4-test.herokuapp.com/';
 
   useEffect(()=>{
     (

@@ -5,11 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 
-function Quiz() {
+function Quiz({api}) {
   let navigate = useNavigate();
   let dispatch = useDispatch();
-
-  const api = 'https://lap4-test.herokuapp.com/';
 
   const questions = [
     {

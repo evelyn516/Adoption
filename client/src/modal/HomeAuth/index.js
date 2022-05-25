@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
 
-function Modal({toggle}) {
+function Modal({toggle, api}) {
     const [refresh, setRefresh] = useState(false)
     const [selectedFile, setSelectedFile] = useState(null);
     let imageUrl;
-
-    const api = 'https://lap4-test.herokuapp.com/';
 
     async function readFile(file) {
         const reader = new FileReader();
@@ -39,7 +37,6 @@ function Modal({toggle}) {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const preview = document.querySelector('img');
         let username = localStorage.getItem('username');
         const b = e.target
         console.log(b.image.files[0])
@@ -48,7 +45,6 @@ function Modal({toggle}) {
         // const myImage = cld.image(imgUrl);
         // console.log(myImage)
         // console.log(imgUrl)
-        // preview.src = imgUrl
         // console.log(imgUrl)
         // console.log(URL.createObjectURL(b.image.files[0]))
         // urlurl = URL.createObjectURL(b.image.files[0])
@@ -88,7 +84,7 @@ function Modal({toggle}) {
 
   return (
     <div style={{display: !toggle ? 'None' : 'Block'}} >
-        <form onSubmit={handleSubmit} enctype="multipart/form-data">
+        <form onSubmit={handleSubmit}>
             <input type='text' name='name' placeholder='Name of cat...'/>
             <input type='number' name='age' placeholder='Enter age..'/>
             <textarea rows='4' name='desc' cols='40' placeholder='Description...' />

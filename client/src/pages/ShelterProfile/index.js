@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Header from '../../layout/Header';
 
-function Profile() {
+function Profile({api}) {
     const navigate = useNavigate()
     const [name, setName] = useState('')
     const [number, setNumber] = useState('')
@@ -15,8 +15,6 @@ function Profile() {
     const [retrieveEmail, setRetrieveEmail] = useState('')
 
     const [refresh, setRefresh] = useState(false)
-
-    const api = 'https://lap4-test.herokuapp.com/';
 
     useEffect(()=>{
         (
