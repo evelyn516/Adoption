@@ -50,9 +50,12 @@ img {
     grid-area: others;
     padding: 10pt; }
 
-.home { grid-area: home; }
+.home { grid-area: home;
+        text-align: left;
+        padding-left: 30pt; }
 
-.about { grid-area: about;}
+.about { grid-area: about;
+        padding: 20pt;}
 
 .modalButton{ 
     float: right;
@@ -64,8 +67,10 @@ img {
 .seeMore{ 
     grid-area: seeMore; 
     float: center;
+    margin-top: -45pt;
     margin-right: 30pt;
     margin-bottom: 30pt;
+    float: right;
 }
 
 .collapsible{

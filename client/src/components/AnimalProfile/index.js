@@ -15,7 +15,7 @@ export default function AnimalSnapshot({ animal }) {
             <p className='message'>{animal.message}</p>
         </div>
         <p className='age'>Age: {animal.age}</p>
-        <p className='breed'>Breed: {animal.breed}</p>
+        <p className='breed'>{animal.breed}</p>
         <p className='sex'>Sex: {animal.sex}</p>
         <p className='kids'>Can live with children: <br/>{animal.kids}</p>
         <p className='others'>Can live with other pets: <br/>{animal.others}</p>

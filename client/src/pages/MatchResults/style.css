@@ -52,7 +52,9 @@ img {
     grid-area: others;
     padding: 10pt; }
 
-.home { grid-area: home; }
+.home { grid-area: home; 
+        float: left;
+        width: 80%;}
 
 .about { grid-area: about;}
 
@@ -65,9 +67,6 @@ img {
 
 .seeMore{ 
     grid-area: seeMore; 
-    float: center;
-    margin-right: 30pt;
-    margin-bottom: 30pt;
 }
 
 .collapsible{
