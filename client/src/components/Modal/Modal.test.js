@@ -1,20 +1,28 @@
 import { default as ContactModal } from '.';
 import { screen, render, fireEvent } from '@testing-library/react';
+import fetchMock from "jest-fetch-mock";
+
+fetchMock.enableMocks();
+
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+    json: () => Promise.resolve({ rates: { CAD: 1.42 } }),
+  })
+);
 
 describe('Modal', () => {
-    jest.mock('axios');
-    let testUsername = "Calliope"
-    let testAPI = jest.fn(); /* or test.com/test/ */
+    let testUsername = "calliope"
+    let testAPI = jest.fn(); 
 
     beforeEach(() => {
-        axios.get.mockResolvedValue({ profileData: testData });
+        /* fetch.mockResponseOnce(JSON.stringify({ profileData: testData })); */
         render( 
         <ContactModal >
-            username={testUsername}
-            api={testAPI}
+            {testUsername}
+            {testAPI} 
         </ContactModal>);
 
-        jest.resetAllMocks()
+        fetch.mockClear();
     });
 
     const testData = { "name": "testShelter", "number": "5", "address": "testRd"}
@@ -25,13 +33,13 @@ describe('Modal', () => {
         expect(button).toContainHTML("Contact Me");
     });
 
-    test('it calls on the API', () => {
+/*     test('it calls on the API', () => {
         expect(testAPI.mock.calls.length).toBe(1)
     });
 
-/*     test('it calls on the test API', () => {
-        expect(axios.get).toHaveBeenCalledWith(expect.stringMatching(/test/));
-    }); */
+     test('it calls on the test API', () => {
+        expect(axios.get).toHaveBeenCalledWith(expect.stringMatching(/testUsername/));
+    }); 
     
     test('it renders the Modal onClick', () => {
         let button = screen.getByRole('modalButton')
@@ -62,5 +70,5 @@ describe('Modal', () => {
         expect(shelterNo.textcontent).toBe(testData["number"])
         const shelterAdd = await screen.getByRole('shelterAdd')
         expect(shelterAdd.textcontent).toBe(testData["address"])
-         })
+         }) */
 });
