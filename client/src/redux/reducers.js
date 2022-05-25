@@ -1,5 +1,6 @@
 const initState = {
-    username: ''
+    username: '',
+    quizData: []
 }
 
 const reducer = (state = initState, action) =>{
@@ -8,6 +9,11 @@ const reducer = (state = initState, action) =>{
             return {
                 ...state, 
                 username: action.value
+            }
+        case "SET_QUIZDATA":
+            return {
+                ...state, 
+                quizData: action.value
             }
         case "RESET":
             return initState

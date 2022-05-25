@@ -10,6 +10,9 @@ urlpatterns = [
     # path('images', display_hotel_images, name = 'hotel_images'),
     path('', PostList.as_view()),
     path('<str:username>/', PostInd.as_view()), 
+    path('animal/cats/', CatList.as_view()),
+    path('animal/dogs/', DogList.as_view()), 
+    path('quiz/match/', MatchList.as_view())
 ]
 
 # if settings.DEBUG:

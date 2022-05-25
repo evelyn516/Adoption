@@ -48,7 +48,6 @@ from rest_framework import permissions
 
 class PostList(APIView):
     permission_classes = (permissions.AllowAny, )
-
     def post(self, request, format = None):
         print(request.data)
         serializer = PostsSerializer(data = request.data)
@@ -68,3 +67,96 @@ class PostInd(APIView):
         posts = self.get_object(username)
         serializer = PostsSerializer(posts, many=True)
         return Response(serializer.data)
+
+class DogList(APIView):
+    permission_classes = (permissions.AllowAny, )
+    def get_object(self, animal):
+        try:
+            return Posts.objects.filter(q1=animal)
+        except Posts.DoesNotExist:
+            raise Http404
+
+    def get(self, request, format= None):  
+        print(self, request)
+        dogs = self.get_object('Dog')
+        serializer = PostsSerializer(dogs, many=True)
+        return Response(serializer.data)
+
+class CatList(APIView):
+    permission_classes = (permissions.AllowAny, )
+    def get_object(self, animal):
+        try:
+            print('hello')
+            return Posts.objects.filter(q1=animal)
+        except Posts.DoesNotExist:
+            raise Http404
+
+    def get(self, request, format= None):  
+        print(self, request)
+        cats = self.get_object('Cat')
+        print(cats)
+        serializer = PostsSerializer(cats, many=True)
+        return Response(serializer.data)
+
+class MatchList(APIView):
+    permission_classes = (permissions.AllowAny, )
+
+    def get_object(self, animal):
+        try:
+            return Posts.objects.filter(q1=animal)
+        except Posts.DoesNotExist:
+            raise Http404
+
+    def post(self, request, format=None):
+        # print(request.data['quizData'])
+        # print('called')
+        # animals_type = self.get_object(request.data['quizData'][0])
+        # serializer = PostsSerializer(animals_type, many=True)
+        # score = 0 
+        # data = []
+        # for x in range(0, len(request.data['quizData']), 1):
+        #     for z in range(0, len(serializer.data), 1):
+        #         for y in serializer.data[z]:
+        #             if request.data['quizData'][x] == serializer.data[z][y]:
+        #                 score+=1
+        #             # serializer.data[z]['score'] = score
+        #     data.append(serializer.data[z])
+
+        # print(len(data))
+        # print(score)
+        
+#  range(0, len(serializer.data[z]), 1)
+        animal = request.data['quizData'][0]
+        db = 0
+        if animal == 'I don\'t mind!':
+            db = Posts.objects.all() #check this
+        else:
+            db = self.get_object(animal)
+
+        db_serialized = PostsSerializer(db, many=True)
+        quizData = (request.data['quizData'])
+        db = db_serialized.data
+
+        score = 0
+        match_list = []
+        level_1 = []
+        level_2 = []
+        level_3 = []
+
+        for pet in db:
+            score = 0
+            for req, values in pet.items(): # mqy hqve to check whether this returns key or vqlue
+                for q in quizData:
+                    if values == q:
+                        score += 1
+            if score > 0: 
+                pet['score'] = score
+                match_list.append(pet)
+            # match_list[pet['id']] = score
+
+            # switch/case stqtement if score >8 level_1>qppend() etc
+            def myFunc(e):
+                return e['score']
+            match_list.sort(key=myFunc, reverse=True)
+
+        return Response(match_list)
