@@ -1,19 +1,66 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 
 function Modal({toggle}) {
     const [refresh, setRefresh] = useState(false)
+    const [selectedFile, setSelectedFile] = useState(null);
+    let imageUrl;
+
+    async function readFile(file) {
+        const reader = new FileReader();
+
+        return new Promise(resolve => {
+            reader.addEventListener("load", function () {
+                // convert image file to base string
+                resolve(reader.result);
+              }, false);
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        })
+    }
+
+    const uploadImage = async file => {
+        const formData = new FormData()
+        formData.append('file', file)
+        formData.append('upload_preset', 'kv5vzhlw')
+
+        const options = {
+            method: 'POST',
+            body: formData
+        }
+        await fetch('https://api.cloudinary.com/v1_1/dcf14da2x/image/upload', options)
+            .then(res => res.json())
+            .then(res => imageUrl=(res.url))
+            .catch(err => console.log(err));
+    }
 
 
     const handleSubmit = async e => {
         e.preventDefault();
+        const preview = document.querySelector('img');
         let username = localStorage.getItem('username');
         const b = e.target
+        console.log(b.image.files[0])
+        // console.log(imgUrl)
+        // imgUrl = await readFile(b.image.files[0])
+        // const myImage = cld.image(imgUrl);
+        // console.log(myImage)
+        // console.log(imgUrl)
+        // preview.src = imgUrl
+        // console.log(imgUrl)
+        // console.log(URL.createObjectURL(b.image.files[0]))
+        // urlurl = URL.createObjectURL(b.image.files[0])
+        // console.log(urlurl)
+        // console.log(selectedFile)
+        await uploadImage(b.image.files[0])
+        console.log(imageUrl)
         const options = {
             method : 'POST', 
             body: JSON.stringify({
                 name: b.name.value,
                 description: b.desc.value,
                 age: b.age.value,
+                image: imageUrl,
                 q1: b.q1.value,
                 q2:b.q2.value,
                 q3:b.q3.value,
@@ -27,7 +74,14 @@ function Modal({toggle}) {
             headers: {'Content-Type': 'application/json'}, withCredentials: true
         }
         await fetch(`http://127.0.0.1:8000/posts/`, options)
+        console.log('posted')
         setRefresh(!refresh)
+    }
+
+    const preview = async e => {
+        console.log(e.target.files[0])
+        let previewUrl = await readFile(e.target.files[0])
+        setSelectedFile(previewUrl)
     }
 
   return (
@@ -36,6 +90,9 @@ function Modal({toggle}) {
             <input type='text' name='name' placeholder='Name of cat...'/>
             <input type='number' name='age' placeholder='Enter age..'/>
             <textarea rows='4' name='desc' cols='40' placeholder='Description...' />
+            <input type="file" name="image" 
+                onChange={preview} 
+                accept="image/*" id="id_image"/>
             <select name="q1" id="q1">
                 {/* # What kind of animal are you looking for? */}
                 <option >Cat</option>
@@ -89,6 +146,7 @@ function Modal({toggle}) {
             
             <button type="submit">Add Animal</button>
         </form>
+        <img src={selectedFile} height="200" alt="Image preview..."></img>
     </div>
   )
 }
