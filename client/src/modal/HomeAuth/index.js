@@ -5,6 +5,8 @@ function Modal({toggle}) {
     const [selectedFile, setSelectedFile] = useState(null);
     let imageUrl;
 
+    const api = 'https://lap4-test.herokuapp.com/';
+
     async function readFile(file) {
         const reader = new FileReader();
 
@@ -73,7 +75,7 @@ function Modal({toggle}) {
             }),
             headers: {'Content-Type': 'application/json'}, withCredentials: true
         }
-        await fetch(`http://127.0.0.1:8000/posts/`, options)
+        await fetch(`${api}posts/`, options)
         console.log('posted')
         setRefresh(!refresh)
     }

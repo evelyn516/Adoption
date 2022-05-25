@@ -6,11 +6,13 @@ import "./style.css";
 const SeeAllCats = () => {
 
     const [cats, setCats] = useState('')
+
+    const api = 'https://lap4-test.herokuapp.com/';
     
     useEffect(()=>{
     (
         async () =>{
-            const response = await fetch(`http://127.0.0.1:8000/posts/animal/cats/`)
+            const response = await fetch(`${api}posts/animal/cats/`)
             const content = await response.json()
             console.log(content)
             setCats(content)

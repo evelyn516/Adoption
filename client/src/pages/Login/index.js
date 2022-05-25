@@ -12,9 +12,11 @@ function Login() {
   const [password, setPassword] = useState('')
   const [redirect, setRedirect] = useState(false)
 
+  const api = 'https://lap4-test.herokuapp.com/';
+
     const handleSubmit = async (e) => {
       e.preventDefault()
-      const responseToken = await fetch('http://127.0.0.1:8000/api/login/', {
+      const responseToken = await fetch(`${api}api/login/`, {
         method : 'POST', 
         body: JSON.stringify({username: username, password: password}),
         headers: {'Content-Type': 'application/json'},
@@ -22,7 +24,7 @@ function Login() {
       const token = await responseToken.json()
       localStorage.setItem('jwt', token.jwt)
       if (token.jwt){
-        const responseAuth = await fetch('http://127.0.0.1:8000/api/auth/', {
+        const responseAuth = await fetch(`${api}api/auth/`, {
           method : 'POST', 
           body: JSON.stringify({token:token.jwt}),
           headers: {'Content-Type': 'application/json'}

@@ -8,6 +8,9 @@ import { useDispatch, useSelector } from "react-redux";
 function Quiz() {
   let navigate = useNavigate();
   let dispatch = useDispatch();
+
+  const api = 'https://lap4-test.herokuapp.com/';
+
   const questions = [
     {
       question: "What kind of animal are you looking for?",
@@ -84,7 +87,7 @@ function Quiz() {
               body: JSON.stringify({quizData}),
               headers: {'Content-Type': 'application/json'}, withCredentials: true
             }
-            const fetchreq = await fetch('http://127.0.0.1:8000/posts/quiz/match/', options)
+            const fetchreq = await fetch(`${api}posts/quiz/match/`, options)
             let content = await fetchreq.json()
             dispatch({
               type: "SET_QUIZDATA",
@@ -108,7 +111,8 @@ function Quiz() {
               body: JSON.stringify({quizData}),
               headers: {'Content-Type': 'application/json'}, withCredentials: true
             }
-            const fetchreq = await fetch('http://127.0.0.1:8000/posts/quiz/match/', options)
+            // const fetchreq = await fetch('http://127.0.0.1:8000/posts/quiz/match/', options)
+            const fetchreq = await fetch(`${api}posts/quiz/match/`, options)
             let content = await fetchreq.json()
             dispatch({
               type: "SET_QUIZDATA",

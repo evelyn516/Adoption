@@ -7,6 +7,8 @@ function Testauth() {
     const navigate = useNavigate()
     const [modal, setModal] = useState(false)
     const [list, setList] = useState([])
+
+    const api = 'https://lap4-test.herokuapp.com/';
     
     useEffect(()=>{
         (
@@ -16,7 +18,7 @@ function Testauth() {
                 navigate('/login')
             } else{
               const token = localStorage.getItem('jwt')
-              const response = await fetch('http://127.0.0.1:8000/api/auth/', {
+              const response = await fetch(`${api}api/auth/`, {
                 method : 'POST', 
                 body: JSON.stringify({token:token}),
                 headers: {'Content-Type': 'application/json'}
@@ -35,7 +37,8 @@ function Testauth() {
         (
           async () =>{
             let username = localStorage.getItem('username')
-            const response = await fetch(`http://127.0.0.1:8000/posts/${username}/`)
+            // const response = await fetch(`http://127.0.0.1:8000/posts/${username}/`)
+            const response = await fetch(`${api}${username}/`)
             const content = await response.json()
             console.log(content)
             setList(content)

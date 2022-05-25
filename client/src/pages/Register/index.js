@@ -10,9 +10,11 @@ function Register() {
     const [confirmPass, setConfirmPass] = useState('')
     const [redirect, setRedirect] = useState(false)
 
+    const api = 'https://lap4-test.herokuapp.com/';
+
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await fetch('http://127.0.0.1:8000/api/register/', {
+        await fetch(`${api}api/register/`, {
             method : 'POST', 
             body: JSON.stringify({username: username, password: password, password_confirmation: confirmPass}),
             headers: {'Content-Type': 'application/json'}

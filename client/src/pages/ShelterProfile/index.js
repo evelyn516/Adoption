@@ -16,6 +16,8 @@ function Profile() {
 
     const [refresh, setRefresh] = useState(false)
 
+    const api = 'https://lap4-test.herokuapp.com/';
+
     useEffect(()=>{
         (
           async () =>{
@@ -29,7 +31,7 @@ function Profile() {
                 body: JSON.stringify({token:token}),
                 headers: {'Content-Type': 'application/json'}
               }
-              const response = await fetch('http://127.0.0.1:8000/api/auth/', options)
+              const response = await fetch(`${api}api/auth/`, options)
               if(response.status === 500){
                   localStorage.clear()
                   navigate('/login')
@@ -45,7 +47,7 @@ function Profile() {
         (
           async () =>{
             let username = localStorage.getItem('username')
-            const response = await fetch(`http://127.0.0.1:8000/profiles/${username}/`)
+            const response = await fetch(`${api}profiles/${username}/`)
             const content = await response.json()
             setRetrieveAddress(content.address)
             setRetrieveEmail(content.email)
@@ -64,7 +66,7 @@ function Profile() {
             headers: {'Content-Type': 'application/json'}, withCredentials: true
         }
         let username = localStorage.getItem('username')
-        await fetch(`http://127.0.0.1:8000/profiles/${username}/`, options)
+        await fetch(`${api}profiles/${username}/`, options)
         setRefresh(!refresh)
     }
 
