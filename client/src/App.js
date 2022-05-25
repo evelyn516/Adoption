@@ -14,21 +14,23 @@ import MatchResults from './pages/MatchResults';
 
 function App() {
 
+  const api = 'https://lap4-test.herokuapp.com/';
+
   return (
 
    <>
       {/* <Nav />  */}
         <Routes>
           <Route path='/' exact element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/homeauth" element={<HomeAuth />} />
-          <Route path="/profile" element={<ShelterProfile />} />
-          <Route path="/modal" element={<Modal/>} />  
-          <Route path='/dogs' element={<SeeAllDogs/> } />
-          <Route path='/cats' element={<SeeAllCats/>} />
-          <Route path='/quiz' element={<Quiz />} />
-          <Route path='/match' element={<MatchResults/>}/>
+          <Route path="/login" element={<Login api={api} />} />
+          <Route path="/register" element={<Register api={api} />} />
+          <Route path="/homeauth" element={<HomeAuth api={api} />} />
+          <Route path="/profile" element={<ShelterProfile api={api} />} />
+          {/* <Route path="/modal" element={<Modal/>} />   */}
+          <Route path='/dogs' element={<SeeAllDogs api={api} /> } />
+          <Route path='/cats' element={<SeeAllCats api={api} />} />
+          <Route path='/quiz' element={<Quiz api={api} />} />
+          <Route path='/match' element={<MatchResults api={api}/>}/>
         </Routes>
    
    

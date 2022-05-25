@@ -3,7 +3,7 @@ import { Modal } from '@mui/material';
 import './style.css'
 /* drawer and paper imports for styling  */
 
-export default function ContactModal({username}) {
+export default function ContactModal({username, api}) {
   const [open, setOpen] = useState(false);
   const [profileData, setProfileData] = useState([])
   
@@ -13,7 +13,7 @@ export default function ContactModal({username}) {
   useEffect(()=>{
     (
       async () =>{
-        const response = await fetch(`http://127.0.0.1:8000/profiles/${username}/`)
+        const response = await fetch(`${api}${username}/`)
         const content = await response.json()
         console.log(content)
         setProfileData(content)
@@ -32,7 +32,7 @@ export default function ContactModal({username}) {
       body: JSON.stringify({to: e.target.emailAddress.value, emailBody: e.target.emailContent.value}),
       headers: {'Content-Type': 'application/json'},
     }
-    const response = await fetch(`http://127.0.0.1:8000/send/`, options)
+    const response = await fetch(`${api}send/`, options)
     const content = await response.json()
     console.log(content)
   }

@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom'
 import Header from '../../layout/Header';
 import Modal from '../../modal/HomeAuth';
 
-function Testauth() {
+function Testauth({api}) {
     const navigate = useNavigate()
     const [modal, setModal] = useState(false)
     const [list, setList] = useState([])
@@ -16,7 +16,7 @@ function Testauth() {
                 navigate('/login')
             } else{
               const token = localStorage.getItem('jwt')
-              const response = await fetch('http://127.0.0.1:8000/api/auth/', {
+              const response = await fetch(`${api}api/auth/`, {
                 method : 'POST', 
                 body: JSON.stringify({token:token}),
                 headers: {'Content-Type': 'application/json'}
@@ -35,7 +35,8 @@ function Testauth() {
         (
           async () =>{
             let username = localStorage.getItem('username')
-            const response = await fetch(`http://127.0.0.1:8000/posts/${username}/`)
+            // const response = await fetch(`http://127.0.0.1:8000/posts/${username}/`)
+            const response = await fetch(`${api}${username}/`)
             const content = await response.json()
             console.log(content)
             setList(content)
@@ -65,7 +66,7 @@ function Testauth() {
     <Header/>
     <button onClick={handleButton} >Add An Animal</button>
     <div>Testauth</div>
-    <div style={{position: 'fixed'}} ><Modal toggle={modal}/></div>
+    <div style={{position: 'fixed'}} ><Modal api={api} toggle={modal}/></div>
     <div>
       {renderRows()}
     </div>
