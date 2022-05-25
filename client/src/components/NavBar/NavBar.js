@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './style.css'
 
 function Nav() {
     const color = {color:'orange'}
@@ -10,13 +11,10 @@ function Nav() {
     return (
         <>
             <nav>
-                <ul>
+                <ul>{/* 
                     <Link style={color} to='/'>
                         <li>Home</li>
-                    </Link>
-                    <Link style={color} to='/profile'>
-                        <li>Profile</li>
-                    </Link>
+                    </Link> */}
                     <Link style={color} to='/dogs'>
                         <li>See dogs</li>
                     </Link>

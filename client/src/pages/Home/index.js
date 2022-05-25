@@ -26,7 +26,7 @@ function Home() {
 
                 </div>
 
-
+    </>
   );
 }
 

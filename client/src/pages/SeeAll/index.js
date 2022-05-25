@@ -8,6 +8,7 @@ const SeeAll = ({ animals, type }) => {
         <header className="title">
             <h1>Meet the {type}</h1>
         </header>
+    
         <main>
         {animals.map( animal => {
             return <AnimalSnapshot key={animal.ref} animal={animal} />})} 

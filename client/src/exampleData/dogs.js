@@ -3,10 +3,27 @@
     need to include active/shedding*/
 
 export const DogData = [
+    { 
+        "name": "Troy",
+        "img": "https://www.battersea.org.uk/sites/default/files/animal_images/00P8e000001EyImEAK.jpeg",
+        "ref" : 393501,
+        "message": "You love cheese and a nap on the couch.",
+        "age" : 14,
+        "active" : "No",
+        "kids" : "Yes - teenagers",
+        "breed": "Jack Russell",
+        "sex": "M",
+        "others": "Y - dogs and cats",
+        "size": "Small",
+        "company": "YES",
+        "training": "No",
+        "home": "I can live anywhere",
+        "about": "Little man Troy is an older gent who has found kennelling difficult and is stressed in kennels when on his own, and barks a lot during the day when on his own. He is much better with company and likes his food and absolutely loves tennis balls, and could play all day! He has shown to be friendly and independent with dogs and might be able to live with one if the right match.Troy need a quiet retirement home where he can relax and we cant wait to see him living his best life in his forever home."},
     {   
       "name": "Lorraine",
         "img": "https://www.battersea.org.uk/sites/default/files/animal_images/00P8e000001F57AEAS.jpeg",
         "ref" : 393339,
+        "message": "You love games.. and Toys.. and FOOD!",
         "age" : 4,
         "active" : "Very",
         "kids" : "N",
@@ -22,6 +39,7 @@ export const DogData = [
         "name": "Wendy",
         "img": "https://www.battersea.org.uk/sites/default/files/animal_images/00P8e000001F8XtEAK.jpeg",
         "ref" : 393445,
+        "message": "Your ideal Sunday includes a long walk followed by a roast",
         "age" : 4,
         "active" : "Somewhat",
         "kids" : "Yes - teenagers",
@@ -38,6 +56,7 @@ export const DogData = [
         "name": "Grace",
         "img": "https://www.battersea.org.uk/sites/default/files/animal_images/00P8e000001F9vQEAS.jpeg",
         "ref" : 393475,
+        "message": "You love to sing.. not neccessarily in key.",
         "age" : 2,
         "active" : "Very",
         "kids" : "Yes - teenagers",
@@ -48,23 +67,7 @@ export const DogData = [
         "company": "YES",
         "training": "YES",
         "home": "I prefer to live away from the inner city",
-        "about": "Grace has been wonderful to work with, if a bit of hard work, full of beans and a bundle of joy. She does lack in manners with her jumping up but is very into food and will do anything for a treat which makes training fun and easy. Grace has been finding kennel life quite stressful so may require an extended adjustment period into a new home environment and will need someone around most of the day initially. Grace has been a mixture of appeasing, playful and over the top with other dogs, often with lots of vocalisation which can come across as intimidating, so new owners must be prepared to do on going dog socialising training and be confident with this."},
-
-    { 
-        "name": "Troy",
-        "img": "https://www.battersea.org.uk/sites/default/files/animal_images/00P8e000001EyImEAK.jpeg",
-        "ref" : 393501,
-        "age" : 14,
-        "active" : "No",
-        "kids" : "Yes - teenagers",
-        "breed": "Jack Russell",
-        "sex": "M",
-        "others": "Y - dogs and cats",
-        "size": "Small",
-        "company": "YES",
-        "training": "No",
-        "home": "I can live anywhere",
-        "about": "Little man Troy is an older gent who has found kennelling difficult and is stressed in kennels when on his own, and barks a lot during the day when on his own. He is much better with company and likes his food and absolutely loves tennis balls, and could play all day! He has shown to be friendly and independent with dogs and might be able to live with one if the right match.Troy need a quiet retirement home where he can relax and we cant wait to see him living his best life in his forever home."}    
+        "about": "Grace has been wonderful to work with, if a bit of hard work, full of beans and a bundle of joy. She does lack in manners with her jumping up but is very into food and will do anything for a treat which makes training fun and easy. Grace has been finding kennel life quite stressful so may require an extended adjustment period into a new home environment and will need someone around most of the day initially. Grace has been a mixture of appeasing, playful and over the top with other dogs, often with lots of vocalisation which can come across as intimidating, so new owners must be prepared to do on going dog socialising training and be confident with this."}       
   ]
 
 

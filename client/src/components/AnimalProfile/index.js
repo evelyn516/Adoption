@@ -9,6 +9,11 @@ export default function AnimalSnapshot({ animal }) {
     <div className='snapshot'>
         <h2 className='name'>{animal.name}</h2>
         <img src={animal.img} alt={animal.name} />
+        <div className='messageMe'>
+            <h4>Message me if...</h4>
+            <p>{animal.message}</p>
+        <ContactModal /* petName={animal.name} ref={animal.ref} */ /> 
+        </div>
         <p className='age'>Age: {animal.age}</p>
         <p className='breed'>Breed: {animal.breed}</p>
         <p className='sex'>Sex: {animal.sex}</p>
@@ -17,9 +22,8 @@ export default function AnimalSnapshot({ animal }) {
         <p className='home'>{animal.home}</p>
         <Collapsible closed>
             {animal.about}
-            <ContactModal /> 
+            {/* shelterinfo */}
         </Collapsible> 
-        <ContactModal /* petName={animal.name} ref={animal.ref} */ /> 
     </div>
   )
 };
