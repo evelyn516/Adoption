@@ -2,7 +2,7 @@
 
 body{
 background-color: #A1DCE4; 
-padding: 2rem;
+/* padding: 2rem; */
 }
 
 .home-title{
@@ -58,7 +58,7 @@ text-align: center;
 }
 
 .footer{
-
+display: flex;
 
 }
 

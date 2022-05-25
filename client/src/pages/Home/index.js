@@ -2,7 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-import Header from '../../layout/Header';
 import all_cats from './all_cats.png'
 import all_dogs from './all_dogs.png'
 
@@ -39,13 +38,10 @@ return (
 
  </div>
   
- <div className="footer">
-        <a>Shelter Login</a>
-        <a>Shelter Register</a>
-  </div>
- </>
-                
-  );
+
+</>
+
+);
 }
 
 export default Home;
