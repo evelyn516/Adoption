@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Indie+Flower&display=swap");
+/* 
+--marigold : #f3a633ff;
+--white: #ffffffff;
+--fiery-rose: #ea5d68ff;
+--blizzard-blue: #a1dce4ff;
+--dim-gray: #6d6a62ff; 
+*/
+
+body{
+    /* background-color: #a1dce4ff; */
+    /* color: #6d6a62ff; */
+    align-items: center;
+    
+}
+
+
+
+.title{
+    text-align: center;
+    color: rgb(242, 38, 113);
+    text-decoration: underline;
+}
+
+main{
+    background-color: rgb(193, 248, 255);
+}
+
+.name { 
+    grid-area: name;
+    text-align: center; }
+img { 
+    grid-area: img; 
+    width:100%;
+}
+.messageMe{
+    grid-area: message;
+    border-bottom: 2pt solid;
+}
+.age { grid-area: age; }
+.breed { grid-area: breed; }
+.sex { grid-area: sex; }
+.kids { grid-area: kids; }
+.others { grid-area: others; }
+.home { grid-area: home; }
+.about { grid-area: about;}
+/* .modalButton{ grid-area: modalButton; }
+.seeMore{ grid-area: seeMore; } */
+
+.snapshot{
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    'name name name name'
+    'img img img img'
+    'img img img img'
+    'message message message message'
+    'age sex breed breed'
+    'kids kids others others'
+    'home home home home'
+    'about about about about';
+
+    background-color: #ffffffff;
+    border: 2pt solid rgb(242, 38, 113);
+    border-radius: 20px;
+    font-size: smaller;
+    margin: 20pt;
+}
