@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './style.css'
-function Modal({toggle, setModal}) {
+
+function Modal({toggle,setModal, api}) {
     const [refresh, setRefresh] = useState(false)
     const [selectedFile, setSelectedFile] = useState(null);
     let imageUrl;
@@ -37,7 +38,6 @@ function Modal({toggle, setModal}) {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const preview = document.querySelector('img');
         let username = localStorage.getItem('username');
         const b = e.target
         console.log(b.image)
@@ -47,7 +47,6 @@ function Modal({toggle, setModal}) {
         // const myImage = cld.image(imgUrl);
         // console.log(myImage)
         // console.log(imgUrl)
-        // preview.src = imgUrl
         // console.log(imgUrl)
         // console.log(URL.createObjectURL(b.image.files[0]))
         // urlurl = URL.createObjectURL(b.image.files[0])
@@ -74,7 +73,7 @@ function Modal({toggle, setModal}) {
             }),
             headers: {'Content-Type': 'application/json'}, withCredentials: true
         }
-        await fetch(`http://127.0.0.1:8000/posts/`, options)
+        await fetch(`${api}posts/`, options)
         console.log('posted')
         setRefresh(!refresh)
     }
@@ -101,6 +100,7 @@ function Modal({toggle, setModal}) {
 
           
             <label htmlFor='q1'>Animal Species</label>
+
             <select name="q1" id="q1">
                 {/* # What kind of animal are you looking for? */}
                 <option >Cat</option>
