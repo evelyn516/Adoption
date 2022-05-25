@@ -15,8 +15,10 @@ const SeeAll = ({ animals }) => {
         {animals.map( animal => {
             return (
                 <>
-                <AnimalSnapshot key={animal.ref} animal={animal} />
-                <Matchability score={animal.score} />
+                <div className="animalCard">
+                    <AnimalSnapshot key={animal.ref} animal={animal} />
+                    <Matchability score={animal.score} />
+                </div>
                 </>
             )})} 
         </main>  
