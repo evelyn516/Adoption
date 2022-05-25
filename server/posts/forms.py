@@ -1,9 +1,9 @@
 # # forms.py
 # from django import forms
-# from .models import *
+# from .models import Posts
 
-# class HotelForm(forms.ModelForm):
+# class PostForm(forms.ModelForm):
 
 # 	class Meta:
-# 		model = Hotel
-# 		fields = ['name', 'hotel_Main_Img']
+# 		model = Posts
+# 		fields = ['name', 'image']

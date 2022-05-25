@@ -1,18 +1,18 @@
 from django.http import HttpResponse
-# from django.shortcuts import render, redirect
-# from .forms import *
+from django.shortcuts import render, redirect
+from .forms import *
 
 # # Create your views here.
-# def hotel_image_view(request):
+# def post_view(request):
 
 # 	if request.method == 'POST':
-# 		form = HotelForm(request.POST, request.FILES)
-
+# 		form = PostForm(request.POST, request.FILES)
 # 		if form.is_valid():
 # 			form.save()
 # 			return redirect('success')
 # 	else:
-# 		form = HotelForm()
+# 		form = PostForm()
+#     # Response(serializer.data, status=status.HTTP_201_CREATED) (for the return statement)
 # 	return render(request, 'home.html', {'form' : form})
 
 
@@ -46,16 +46,15 @@ from rest_framework import permissions
 # Create your views here.
 
 
-
 class PostList(APIView):
     permission_classes = (permissions.AllowAny, )
 
     def post(self, request, format = None):
-        print('called')
+        print(request.data)
         serializer = PostsSerializer(data = request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.data, status=status.HTTP_201_CREATED) ##
         return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
     
 class PostInd(APIView):

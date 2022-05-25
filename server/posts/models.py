@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 
 # Create your models here.
@@ -5,7 +6,7 @@ from django.db import models
 # models.py
 class Posts(models.Model):
     name = models.CharField(max_length=50)
-    # hotel_Main_Img = models.ImageField(upload_to='images/')
+    image = models.CharField(max_length=255, default='None') #image
     description = models.CharField(max_length=255, default='None')
     age = models.CharField(max_length=255, default='None')
     q1 = models.CharField(max_length=255, default= 'None')
