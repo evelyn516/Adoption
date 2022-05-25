@@ -29,8 +29,8 @@ const SeeAllCats = () => {
             <h1>Meet the Cats</h1>
         </header>
         <main>
-        {cats && cats.map( animal => {
-            return <AnimalSnapshot key={animal.ref} animal={animal} />})} 
+        {cats && cats.map( (animal, i) => {
+            return <AnimalSnapshot key={i} animal={animal} />})} 
         </main>  
         </>
     )

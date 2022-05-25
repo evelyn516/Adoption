@@ -1,22 +1,26 @@
 import React from "react";
 import AnimalSnapshot from "../../components/AnimalProfile";
-import Matchability from "../../components/Matchability";
+import Matchability from "../../components/Matchability/index"
 import "./style.css";
+import {useSelector } from "react-redux";
 
 /* fetch data matches */
 
-const SeeAll = ({ animals }) => {
+const MatchResults = () => {
+    console.log('hello')
+    let animals = useSelector((state)=> state.quizData)
+    console.log(animals)
     return (
         <>
         <header className="title">
             <h1>Your Matches!</h1>
         </header>
         <main>
-        {animals.map( animal => {
+        {animals.map((animal, i) => {
             return (
                 <>
-                <AnimalSnapshot key={animal.ref} animal={animal} />
-                <Matchability score={animal.score} />
+                <AnimalSnapshot key={i} animal={animal} />
+                <Matchability key={i} score={animal.score} />
                 </>
             )})} 
         </main>  
@@ -24,4 +28,4 @@ const SeeAll = ({ animals }) => {
     )
 }
 
-export default SeeAll;
+export default MatchResults;
