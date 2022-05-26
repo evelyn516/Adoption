@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Header from '../../layout/Header';
 import './style.css'
+import cat_sleeping from './cat_sleeping.png'
 
 function Register({api}) {
     const navigate = useNavigate()
@@ -30,7 +31,7 @@ function Register({api}) {
 
     <form className='registerPage' onSubmit={handleSubmit}>
       <div class="imgcontainer">
-      <img src="https://metaversedogcrypto.com/user/assets/img/login%20(1).png" alt="Avatar" class="avatar"/>
+      <img src={cat_sleeping} alt="Avatar" class="avatar"/>
       </div>
       <div className="registerContainer">
 

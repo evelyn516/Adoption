@@ -7,7 +7,7 @@ ul.horizontal {
 }
 
 ul.horizontal li a.active {
-    background-color: #04AA6D;
+    background-color: #ff8fab;
 }
 
 ul.horizontal li a {
@@ -17,7 +17,7 @@ ul.horizontal li a {
     padding: 14px 16px;
     text-decoration: none;
     font-size:20px;
-    margin-left: auto;
+    margin-left: 1.8rem;
 }
 
 .horizontal { 
