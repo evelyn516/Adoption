@@ -4,7 +4,7 @@
 
 .loginPage {
     border: 3px solid #f1f1f1;
-    border-radius: 8%;
+    border-radius: 6%;
     width:90%;
     margin:auto;
     color:white;
@@ -70,6 +70,6 @@
   }
 
   .remember_forgot{
-    font-size: 18px;
+    font-size: 20px;
       padding-top: 20px;
   }
