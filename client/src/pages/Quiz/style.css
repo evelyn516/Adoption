@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Indie+Flower&display=swap');
 
 
-
+/* body {
+    background-color: #F3A633;
+} */
 .questions-grid{
 height: 100vh;
 width: 100vw;

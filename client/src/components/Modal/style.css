@@ -1,8 +1,38 @@
-.modalBox{
-    font-size:50px;
-    background-color: pink;
-    width: 80%;
-    margin:500px auto auto auto;
-    border-radius: 10%;
+@import url("https://fonts.googleapis.com/css2?family=Modak&display=swap");
+
+.modal{
+    font-family: "Modak", cursive;
 }
 
+
+
+
+.modalBox{
+    /* font-size:50px; */
+    background-color: pink;
+    width: 80%;
+    margin:70px auto auto auto;
+    border-radius: 1rem;
+    padding:10px;
+}
+
+
+#emailSubmit{
+    width:60%;
+    font-size: small;
+    padding:10px;
+}
+
+.contactForm{
+    display: block;
+}
+
+.modalBox > form> div> input, .modalBox > form> div> textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  

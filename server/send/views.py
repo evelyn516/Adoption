@@ -9,5 +9,8 @@ from django.core.mail import send_mail
 class SendMail(APIView):
     def post(self, request):
         print(request.data)
-        send_mail('This is the subject',request.data['emailBody'], 'noreply@adoption.com', [request.data['to']], fail_silently=False)
+        send_mail(f"{request.data['animalName']} => id: {request.data['animalId']}",
+        request.data['emailBody'], 
+        'noreply@adoption.com', 
+        [request.data['to']], fail_silently=False)
         return Response({'message':'email sent'}) 
