@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import all_cats from './all_cats.png'
 import all_dogs from './all_dogs.png'
+import Header from '../../layout/Header'
 
 
 
@@ -22,7 +23,7 @@ return (
                     <li className="list-btn"> <img  src={all_dogs} alt="dogs" className="dog-img" /> </li>
                     </Link>
                     <Link  to='/cats'>
-                        <li className="list-btn"> img  src={all_cats} alt="cat" className="cat-img" /> </li>
+                        <li className="list-btn"> <img  src={all_cats} alt="cat" className="cat-img" /> </li>
                     </Link>
                     <Link  to='/quiz'>
                         <li className="list-btn"> Compatability Quiz</li>
