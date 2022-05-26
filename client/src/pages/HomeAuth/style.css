@@ -9,6 +9,13 @@ body {
 }
 
 .OrgPosts {
-    border: 15px black;
+    /* border: 0px solid black; */
     padding: 5% 10% 5% 10%;
+    margin: 10px;
+    border-radius: 10%;
+    background-color: #ff8fab;
+}
+
+.OrgPostImg{
+    width: 100%;
 }

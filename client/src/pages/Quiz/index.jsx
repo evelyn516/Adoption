@@ -126,6 +126,7 @@ function Quiz({api}) {
 
   return (
     <>
+    <Header/>
     <section className="questions-grid">
 
       <h1 className="questions"> {questions[currentQuestion].question}</h1>
@@ -143,10 +144,6 @@ function Quiz({api}) {
                 </option>
               ))}
           </select>
-<div className="img-container">
-
-<img src={little_cat} alt="little_cat" className="little-cat-img"/>
-</div>
           {currentQuestion === questions.length  ? (
             <h1 className="questions">
               {" "}
@@ -155,6 +152,10 @@ function Quiz({api}) {
           ) : (
             <button className="next-q"> Next Question</button>
           )}
+<div className="img-container">
+
+<img src={little_cat} alt="little_cat" className="little-cat-img"/>
+</div>
         </form>
       </div>
 </section>
