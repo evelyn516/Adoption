@@ -88,17 +88,3 @@ class UserView(APIView):
         user = User.objects.filter(id = payload['id']).first()
         serializer = UserRegistrationSerializer(user)
         return Response(serializer.data)
-
-class LogoutView(APIView):
-    def post(self, request):
-        # response = Response()
-        # response.delete_cookie('jwt')
-        # response.data= {
-        #     "message": "success"
-        # }
-        # return response
-        try:
-            auth.logout(request)
-            return Response({ 'success': 'Loggout Out' })
-        except:
-            return Response({ 'error': 'Something went wrong when logging out' })
