@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-
 
 questions = {
     'What kind of animal are you looking for?': ['cat', 'dog', 'I don\'t mind!'],

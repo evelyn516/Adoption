@@ -5,7 +5,7 @@ import "./style.css";
 const SeeAll = ({ animals, type }) => {
     return (
         <>
-        <header className="title">
+        <header className="title" role='title'>
             <h1>Meet the {type}</h1>
         </header>
     
