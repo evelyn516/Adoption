@@ -12,8 +12,8 @@ margin-bottom: 0.8rem;
 text-align: center;
 font-family: 'Modak', cursive;
 color: #F3A633;
-
 }
+
 .btn-container{
 display: flex;
 flex-direction: column;
@@ -46,14 +46,15 @@ text-decoration: none;
 
 
 .list-btn{
+padding: 1rem;
+font-size: 1.5rem;
+padding: 1rem;
 
 display: inline-block;
 font-size: 3rem;
 list-style-type: none;
 text-decoration: none;
 font-family: 'Indie Flower', cursive;
-
-
 }
 
 .footer{

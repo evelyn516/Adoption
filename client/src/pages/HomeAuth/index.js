@@ -2,8 +2,9 @@ import React, {useEffect, useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Header from '../../layout/Header';
 import Modal from '../../modal/HomeAuth';
+import "./style.css";
 
-function Testauth() {
+function Testauth({api}) {
     const navigate = useNavigate()
     const [modal, setModal] = useState(false)
     const [list, setList] = useState([])
@@ -16,7 +17,7 @@ function Testauth() {
                 navigate('/login')
             } else{
               const token = localStorage.getItem('jwt')
-              const response = await fetch('http://127.0.0.1:8000/api/auth/', {
+              const response = await fetch(`${api}api/auth/`, {
                 method : 'POST', 
                 body: JSON.stringify({token:token}),
                 headers: {'Content-Type': 'application/json'}
@@ -35,7 +36,7 @@ function Testauth() {
         (
           async () =>{
             let username = localStorage.getItem('username')
-            const response = await fetch(`http://127.0.0.1:8000/posts/${username}/`)
+            const response = await fetch(`${api}posts/${username}/`)
             const content = await response.json()
             console.log(content)
             setList(content)
@@ -45,13 +46,19 @@ function Testauth() {
         ()
       }, [])
       console.log(list)
-    const renderRows = () => {
-      list.map( obj => 
-        <>
-        <h2>{obj.name}</h2>
-        </>
+
+
+    const renderRows = () => 
+      list.map( obj =>  // image, age, desc, id, delete, edit
+        <div className='OrgPosts'>
+          <h2>{obj.name}</h2>
+          <img src={obj.image} alt={`${obj.q1} called ${obj.name}`}/>
+          <p>Age: {obj.age}</p>
+          <p>{obj.description}</p>
+          <span> <button>Edit</button> <button>Delete</button> </span>
+        </div>
       )
-    }
+    
     
     const handleButton = (e) => {
       e.preventDefault()
@@ -63,9 +70,10 @@ function Testauth() {
   return (
     <>
     <Header/>
-    <button onClick={handleButton} >Add An Animal</button>
-    <div>Testauth</div>
-    <div style={{position: 'fixed'}} ><Modal toggle={modal}/></div>
+
+    <h1 id='OrgHeader' >Welcome to the Adopter Organisation Page!</h1>
+    <button onClick={handleButton} >{modal ? 'Close Tab' : 'Add An Animal'}</button>
+    <div><Modal api={api} toggle={modal} setModal={setModal}/></div>
     <div>
       {renderRows()}
     </div>
