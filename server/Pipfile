@@ -9,8 +9,17 @@ djangorestframework = "*"
 django-cors-headers = "*"
 pyjwt = "*"
 pillow = "*"
+django-nose = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-django = "*"
+pytest-cov = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.10"
+
+[scripts]
+test = "pytest ."
+coverage = "pytest . --cov-report term-missing --cov=."

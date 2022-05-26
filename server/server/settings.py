@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_nose'
 ]
 
 MIDDLEWARE = [
@@ -148,3 +149,14 @@ EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = 'c262eedde498a5'
 EMAIL_HOST_PASSWORD = '0d55abe3f11686'
 EMAIL_PORT = '2525'
+
+
+
+# # Use nose to run all tests
+# TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+# # Tell nose to measure coverage on the 'foo' and 'bar' apps
+# NOSE_ARGS = [
+#     '--with-coverage',
+#     '--cover-package=posts,profiles,send,users',
+# ]
