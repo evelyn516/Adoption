@@ -52,7 +52,7 @@ function Testauth({api}) {
       list.map( obj =>  // image, age, desc, id, delete, edit
         <div className='OrgPosts'>
           <h2>{obj.name}</h2>
-          <img src={obj.image} alt={`${obj.q1} called ${obj.name}`}/>
+          <img className='OrgPostImg' src={obj.image} alt={`${obj.q1} called ${obj.name}`}/>
           <p>Age: {obj.age}</p>
           <p>{obj.description}</p>
           <span> <button>Edit</button> <button>Delete</button> </span>

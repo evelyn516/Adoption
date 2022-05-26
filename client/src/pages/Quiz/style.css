@@ -15,7 +15,6 @@ background-color: #F3A633;
 text-align: center;
 padding: 4rem 1rem 2rem 1rem;
 
-
 font-size: 2rem;
 
 }
@@ -97,4 +96,8 @@ margin: 0 auto;
 }
 .little-cat-img{
 width: 10rem;
+}
+
+.next-q{
+    width:50%;
 }

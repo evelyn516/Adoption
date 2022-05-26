@@ -36,7 +36,7 @@ function Header() {
     menu = (
       <>
       <li><NavLink to='/homeauth'>Home</NavLink></li>
-      <li><NavLink to='/profile'>Edit Profile</NavLink></li>
+      <li><NavLink to='/profile'>Profile</NavLink></li>
       <li><NavLink to='/' onClick = {handleClick}>Logout</NavLink></li>
       </>
     )
