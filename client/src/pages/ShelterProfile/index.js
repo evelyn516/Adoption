@@ -74,26 +74,26 @@ function Profile() {
         <Header/>
 
       <div>
-        <h2>Profile</h2>
-        <p>Your Organisation Name: {retrieveUser}</p>
-        <p>Your Organisation Number: {retrieveNumber}</p>
-        <p>Your Shelter's Address: {retrieveAddress}</p>
-        <p>Your Shelter's Email: {retrieveEmail}</p>
+        <h2 role='profile'>Profile</h2>
+        <p role='orgName'>Your Organisation Name: {retrieveUser}</p>
+        <p role='orgNo'>Your Organisation Number: {retrieveNumber}</p>
+        <p role='sheltAdd'>Your Shelter's Address: {retrieveAddress}</p>
+        <p role='sheltEmail'>Your Shelter's Email: {retrieveEmail}</p>
         </div>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor='name'>Organisation Name</label>
-            <input type='text' id='name' onChange={e=>setName(e.target.value)}></input>
+        <form role='form' onSubmit={handleSubmit}>
+            <label htmlFor='name' role='orgNameLabel'>Organisation Name</label>
+            <input type='text' id='name' role='orgNameInput' onChange={e=>setName(e.target.value)}></input>
 
-            <label htmlFor='phonenum'>Phone Number</label>
-            <input type='tel' id='phonenum' pattern='^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$' onChange={e=>setNumber(e.target.value)}></input>
+            <label htmlFor='phonenum' role='numberLabel'>Phone Number</label>
+            <input role='numberInput' type='tel' id='phonenum' pattern='^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$' onChange={e=>setNumber(e.target.value)}></input>
 
-            <label htmlFor='address'>Shelter's Address</label>
-            <input type='textarea' id='address' onChange={e=>setAddress(e.target.value)}></input>
+            <label role='addressLabel' htmlFor='address'>Shelter's Address</label>
+            <input role='addressInput' type='textarea' id='address' onChange={e=>setAddress(e.target.value)}></input>
 
-            <label htmlFor='email'>Shelter's Email</label>
-            <input type='email' id='email' onChange={e=>setEmail(e.target.value)}></input>
+            <label role='emailAddressLabel' htmlFor='email'>Shelter's Email</label>
+            <input type='email' role='emailAddressInput' id='email' onChange={e=>setEmail(e.target.value)}></input>
 
-            <input type='submit' value='Update Profile'></input>
+            <input type='submit' role='submit' value='Update Profile'></input>
         </form>
     </>
   )

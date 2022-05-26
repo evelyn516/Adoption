@@ -27,14 +27,14 @@ function Register() {
   return (
     <>
     <Header/>
-    <form onSubmit={handleSubmit}>
-        <label htmlFor='username'>Enter Username: </label>
-        <input type='text' id="username" onChange={(e)=>setUsername(e.target.value)}></input>
-        <label htmlFor='password'>Enter Password: </label>
-        <input type='password' id='password' onChange={(e)=>setPassword(e.target.value)}></input>
-        <label htmlFor='confirm_password'>Confirm Password: </label>
-        <input type='password' id='confirm_password'onChange={(e)=>setConfirmPass(e.target.value)}></input>
-        <input type='submit' value='Sign up!'></input>
+    <form role='form' onSubmit={handleSubmit}>
+        <label htmlFor='username'role='usernameLabel' >Enter Username: </label>
+        <input type='text' role='username'  id="username" onChange={(e)=>setUsername(e.target.value)}></input>
+        <label htmlFor='password' role='passwordLabel' >Enter Password: </label>
+        <input type='password' id='password'  role='password' onChange={(e)=>setPassword(e.target.value)}></input>
+        <label htmlFor='confirm_password' role='confirmPasswordLabel' >Confirm Password: </label>
+        <input type='password' role='confirmPassword'  id='confirm_password'onChange={(e)=>setConfirmPass(e.target.value)}></input>
+        <input type='submit' role='submit'  value='Sign up!'></input>
     </form>
     </>
   )

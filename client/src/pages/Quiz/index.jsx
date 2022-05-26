@@ -50,20 +50,20 @@ const nextQuestion = () => {
 <>
 
 
-<h1 className="questions"> {questions[currentQuestion].question}</h1>
+<h1 className="questions" role='question'> {questions[currentQuestion].question}</h1>
 
 <div className="answers-grid">
          
           <select className="category"  value={selectAnswer} onChange={handleResponse}>
             
-          <option className="single-opt">select one answer</option>
+          <option className="single-opt" role='answer'>select one answer</option>
 
           {questions[currentQuestion].answers && questions[currentQuestion].answers.map((answer) => (
           <option className="single-opt" value={answer} key={answer}> {answer} </option> ))}
 
           </select>
         </div>
-{currentQuestion === questions.length - 1 ? ( <h1 className="questions"> Questions answered! Link to the matching pets now</h1>) : (<button className="next-q" onClick={() => nextQuestion()}> Next Question</button> )}
+{currentQuestion === questions.length - 1 ? ( <h1 className="questions"> Questions answered! Link to the matching pets now</h1>) : (<button role='button' className="next-q" onClick={() => nextQuestion()}> Next Question</button> )}
 {currentQuestion === questions.length -1 && <ul>{response.map((r) => <li>{r}</li>)}</ul>}        
 
 </>
