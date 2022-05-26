@@ -138,7 +138,7 @@ function Modal({toggle,setModal, api}) {
                 {/* Do you have other pets */}
                 <option >Yes - A Cat</option>
                 <option >Yes - A Dog</option>
-                <option >Nope</option>
+                <option >Sadly not</option>
             </select>
 
             <label htmlFor='q6'>Does this animal require a garden?</label>
