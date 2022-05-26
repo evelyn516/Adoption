@@ -30,7 +30,7 @@ function Quiz({api}) {
     },
     {
       question: "Do you have other pets?",
-      answers: ["Yes - A Cat", "Yes - A Dog", "Nope"],
+      answers: ["Yes - A Cat", "Yes - A Dog", "Sadly not"],
     },
     {
       question: "Do you have a fenced-in garden?",
@@ -50,7 +50,7 @@ function Quiz({api}) {
     },
     {
       question:
-        "Would you be able to take a pet with some behavioural issues that needs extra training?",
+        "Would you be able to take a pet that needs extra training?",
       answers: ["Nope", "Minor", "Some", "I like a challenge"],
     },
   ]
@@ -103,26 +103,26 @@ function Quiz({api}) {
     }
   };
 
-  if (currentQuestion === questions.length){
-    (
-        async () =>{
-            let options = {
-              method: 'POST',
-              body: JSON.stringify({quizData}),
-              headers: {'Content-Type': 'application/json'}, withCredentials: true
-            }
-            // const fetchreq = await fetch('http://127.0.0.1:8000/posts/quiz/match/', options)
-            const fetchreq = await fetch(`${api}posts/quiz/match/`, options)
-            let content = await fetchreq.json()
-            dispatch({
-              type: "SET_QUIZDATA",
-              value: content
-            })
-            return navigate('/match')
-    }
-    )
-    ()
-  }
+  // if (currentQuestion === questions.length){
+  //   (
+  //       async () =>{
+  //           let options = {
+  //             method: 'POST',
+  //             body: JSON.stringify({quizData}),
+  //             headers: {'Content-Type': 'application/json'}, withCredentials: true
+  //           }
+  //           // const fetchreq = await fetch('http://127.0.0.1:8000/posts/quiz/match/', options)
+  //           const fetchreq = await fetch(`${api}posts/quiz/match/`, options)
+  //           let content = await fetchreq.json()
+  //           dispatch({
+  //             type: "SET_QUIZDATA",
+  //             value: content
+  //           })
+  //           return navigate('/match')
+  //   }
+  //   )
+  //   ()
+  // }
 
   return (
     <>
