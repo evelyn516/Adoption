@@ -25,10 +25,10 @@ const SeeAllDogs = ({api}) => {
     return (
         <>
         <Header/>
-        <header className="title">
+        <header className="seeAllTitle">
             <h1>Meet the Dogs</h1>
         </header>
-        <main>
+        <main className="seeAllMain">
         {dogs && dogs.map( animal => {
             return <AnimalSnapshot key={animal.ref} animal={animal} api={api} />})} 
         </main>  

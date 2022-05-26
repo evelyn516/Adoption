@@ -1,3 +1,120 @@
-.title{
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Indie+Flower&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+/* 
+--marigold : #f3a633ff;
+--white: #ffffffff;
+--fiery-rose: #ea5d68ff;
+--blizzard-blue: #a1dce4ff;
+--dim-gray: #6d6a62ff; 
+*/
+
+body{
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;    
+}
+
+
+
+.seeAllTitle{
     text-align: center;
+    color: rgb(242, 38, 113);
+    text-decoration: underline;
+}
+
+.seeAllMain{
+    background-color: rgb(193, 248, 255);
+}
+
+.animalProfileName { 
+    grid-area: name;
+    text-align: center; }
+.animalProfileImg { 
+    grid-area: img; 
+    width:100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    /* media query needed here */
+}
+.age { grid-area: age; }
+.breed { grid-area: breed; }
+.sex { grid-area: sex; }
+.kids { 
+    grid-area: kids; 
+    padding: 10pt;}
+
+.others { 
+    grid-area: others;
+    padding: 10pt; }
+
+.home { grid-area: home;
+        padding: 10pt; }
+
+.about { grid-area: about;
+        padding: 20pt;}
+
+.modalButton{ 
+    float: right;
+    margin-right: 30pt;
+    grid-area: modalButton;
+    margin-top: 20pt;
+}
+
+.seeMore{ 
+    grid-area: seeMore; 
+    float: center;
+    margin-top: -45pt;
+    margin-right: 30pt;
+    margin-bottom: 30pt;
+    float: right;
+}
+
+.collapsible{
+    grid-area: collapsible;
+    width: 100%;
+}
+.messageTitle{ grid-area: title;}
+.message{ grid-area: sell;}
+.messageMe{
+    display: grid;
+    text-align: left;
+    grid-area: message;
+    grid-template-areas:
+    'title title title modalButton'
+    'sell sell sell sell';
+    border-bottom: 2pt solid;
+    padding-left: 10pt;
+}
+
+.snapshot{
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+    'name name name name'
+    'img img img img'
+    'img img img img'
+    'message message message message'
+    'age sex breed breed'
+    'kids kids others others'
+    'home home home home'
+    'collapsible collapsible collapsible collapsible';
+
+    background-color: #ffffffff;
+    box-shadow: 5px 10px 18px #6d6a62ff;
+    border-radius: 8pt;
+    font-size: 12.5px;
+    margin: 20pt;
+}
+
+/* img centre */
+
+button{
+    background-color: #f3a633ff;
+    border: none;
+    color: white;
+    width:20vw;
+    font-size: 30px;
+    padding: 8pt;
+    border-radius: 8pt;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }

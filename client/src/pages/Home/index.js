@@ -14,9 +14,9 @@ function Home() {
 
 return (
 <>
-<Header/>
-
-<h1 className="home-title"> Welcome to our Home Page </h1>
+{/* <Header/> */}
+<div className="quizPage">
+<h1 className="home-title"> Adopter</h1>
 <div className="btn-container">
      <ul className="homeBtns">
                     <Link  to='/dogs'>
@@ -25,9 +25,9 @@ return (
                     <Link  to='/cats'>
                         <li className="list-btn"> <img  src={all_cats} alt="cat" className="cat-img" /> </li>
                     </Link>
-                    <Link  to='/quiz'>
+                    {/* <Link  to='/quiz'>
                         <li className="list-btn"> Compatability Quiz</li>
-                    </Link>
+                    </Link> */}
       
                 </ul>
 
@@ -48,7 +48,7 @@ return (
                     
  
   </div>
-
+</div>
 </>
   );
 
