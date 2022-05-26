@@ -5,9 +5,9 @@ import "./style.css";
 function NavBar() {
   return (
     <>
-      <nav className="nav-bar">
-        <Link role="loginLink">Shelter Login</Link>
-        <Link role="registerLink">Shelter Register</Link>
+      <nav className="nav-bar" role="nav">
+        <Link role="loginLink" to="#" >Shelter Login</Link>
+        <Link role="registerLink" to="#">Shelter Register</Link>
       </nav>
     </>
   );

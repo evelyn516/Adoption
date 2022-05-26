@@ -1,6 +1,6 @@
 import { default as AnimalSnapshot } from '.';
-import '@testing-library/jest-dom'
 import { screen, render } from '@testing-library/react';
+import '@testing-library/jest-dom'
 
 describe('Animal Snapshot', () => {
     let TestAnimal = { 
