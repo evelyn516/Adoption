@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Header from "../../layout/Header";
+
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 
@@ -124,6 +126,8 @@ function Quiz({api}) {
 
   return (
     <>
+    <section className="questions-grid">
+
       <h1 className="questions"> {questions[currentQuestion].question}</h1>
 
       <div className="answers-grid">
@@ -139,6 +143,12 @@ function Quiz({api}) {
                 </option>
               ))}
           </select>
+<div className="img-container">
+
+<img src={little_cat} alt="little_cat" className="little-cat-img"/>
+</div>
+</section>
+
 
           {currentQuestion === questions.length  ? (
             <h1 className="questions">
