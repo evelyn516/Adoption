@@ -21,7 +21,6 @@ class UserProfileList(APIView):
         try:
             return UserProfile.objects.get(username=username)
         except UserProfile.DoesNotExist:
-            print('failed')
             raise Http404
 
     def get(self, request, username):
