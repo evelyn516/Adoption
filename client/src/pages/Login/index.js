@@ -46,12 +46,12 @@ function Login() {
   return (
     <>
     <Header/>
-    <form onSubmit={handleSubmit}>
-        <label htmlFor='username'>Enter Username: </label>
-        <input type='text' id="username" onChange={(e)=>setUsername(e.target.value)} required></input>
-        <label htmlFor='password'>Enter Password: </label>
-        <input type='password' id='password' onChange={(e)=>setPassword(e.target.value)} required></input>
-        <input type='submit' value='Login!'></input>
+    <form role='form' onSubmit={handleSubmit}>
+        <label htmlFor='username' role='usernameLabel'>Enter Username: </label>
+        <input type='text' role='username' id="username" onChange={(e)=>setUsername(e.target.value)} required></input>
+        <label htmlFor='password' role='passwordLabel'>Enter Password: </label>
+        <input type='password' id='password' role='password' onChange={(e)=>setPassword(e.target.value)} required></input>
+        <input type='submit' role='submit' value='Login!'></input>
     </form>
     </>
   )

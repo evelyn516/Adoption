@@ -19,8 +19,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --coverage",
+    "eject": "react-scripts eject",
+    "coverage": "react-scripts test --setupFilesAfterEnv ./src/test/setupTests.js --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": [

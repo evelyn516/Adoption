@@ -44,7 +44,7 @@ function Header() {
   }
 
   return (
-    <nav>
+    <nav role='navbar'>
         {menu}
     </nav>
   )
