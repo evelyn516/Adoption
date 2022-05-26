@@ -35,7 +35,7 @@ function Login({api}) {
         })
         setRedirect(true)
       } else if(token.detail){
-        alert('Incorrect Username and Passwor')
+        alert('Incorrect Username and Password')
       }
   }
 

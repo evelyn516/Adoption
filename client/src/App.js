@@ -14,7 +14,7 @@ import MatchResults from './pages/MatchResults';
 
 function App() {
 
-  const api = 'https://lap4-test.herokuapp.com/';
+  const api = 'http://127.0.0.1:8000/';
 
   return (
 
