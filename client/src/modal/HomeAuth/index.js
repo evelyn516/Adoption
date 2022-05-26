@@ -173,7 +173,7 @@ function Modal({toggle,setModal, api}) {
             </div>
             
 
-            <button type="submit" onClick={()=>setModal(!toggle)}>Add Animal</button>
+            <button type="submit" onClick={()=>setModal(prevState=>!prevState)}>Add Animal</button>
             </div>
         </form>
     </div>
