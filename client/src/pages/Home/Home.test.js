@@ -1,4 +1,4 @@
-/* import { default as Home } from '.';
+import { default as Home } from '.';
 import { screen, render} from '@testing-library/react';
 import '@testing-library/jest-dom'
 import { MemoryRouter } from 'react-router-dom';
@@ -29,4 +29,4 @@ describe('Home Page', () => {
         expect(quizLink).toBeInTheDocument();
     });
 });
- */
+ 

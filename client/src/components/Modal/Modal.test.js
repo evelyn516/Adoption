@@ -1,4 +1,4 @@
-/* import { default as ContactModal } from '.';
+import { default as ContactModal } from '.';
 import { screen, render, fireEvent } from '@testing-library/react';
 import fetchMock from "jest-fetch-mock";
 
@@ -23,7 +23,7 @@ describe('Modal', () => {
       });
 
     beforeEach(() => {
-        /* fetch.mockResponseOnce(JSON.stringify({ profileData: testData })); 
+        fetch.mockResponseOnce(JSON.stringify({ profileData: testData })); 
         render( 
         <ContactModal >
             {testUsername}
@@ -41,7 +41,7 @@ describe('Modal', () => {
         expect(button).toContainHTML("Contact Me");
     });
 
-/*     test('it calls on the API', () => {
+     test('it calls on the API', () => {
         expect(testAPI.mock.calls.length).toBe(1)
     });
 
@@ -80,4 +80,3 @@ describe('Modal', () => {
         expect(shelterAdd.textcontent).toBe(testData["address"])
          }) 
 });
- */

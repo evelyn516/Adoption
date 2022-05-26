@@ -8,7 +8,7 @@ import "./style.css";
 const SeeAll = ({ animals }) => {
     return (
         <>
-        <header className="title">
+        <header className="title" role="matchesTitle">
             <h1>Your Matches!</h1>
         </header>
         <main>
