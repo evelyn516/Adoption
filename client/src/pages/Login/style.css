@@ -37,6 +37,7 @@
     cursor: pointer;
     width: 100%;
     font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
   }
   
   /* Add a hover effect for buttons */
