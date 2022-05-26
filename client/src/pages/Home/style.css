@@ -1,29 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+body{
+background-color: #A1DCE4; 
+
+}
+
 .home-title{
+font-size: 4rem;
+margin-top: 1.5rem;
+margin-bottom: 0.8rem;
 text-align: center;
-margin-top: 10rem;
-margin-bottom: 4rem;
+font-family: 'Modak', cursive;
+color: #F3A633;
 }
 
-.homeBtns{
+.btn-container{
 display: flex;
-align-items: center;
-justify-content: center;
+flex-direction: column;
+}
+.dog-img{
+width: 9rem;
+margin-bottom: 0rem;
+transition: all 0.5s;
+}
+.dog-img:hover{
+transform: scale(1.5);
 
 }
+
+
+.cat-img{
+width: 8rem;
+margin-bottom: 0rem;
+
+transition: all 0.5s;
+}
+
+.cat-img:hover{
+transform: scale(1.5);
+}
+
+.links-to{
+text-decoration: none;
+}
+
 
 .list-btn{
 padding: 1rem;
 font-size: 1.5rem;
 padding: 1rem;
+
 display: inline-block;
-width: 12rem;
-height: 2rem;
+font-size: 3rem;
 list-style-type: none;
 text-decoration: none;
-border: solid 1px black;
-margin: 0 2rem;
-text-align: center;
+font-family: 'Indie Flower', cursive;
+}
 
+.footer{
+display: flex;
 
 }
 
+a{
+text-align: center;  
+}
+
+
+.footer{
+display: flex;
+flex-direction: column;
+margin-top: 4rem;
+}
+.foot-item{
+margin-bottom: 0.2rem;
+font-size: 2rem;
+width: 100vw;
+height: 8vh;
+list-style-type: none;
+text-decoration: none;
+font-family: 'Indie Flower', cursive;
+
+}
+
+.first{
+    background-color: #F3A633;
+    position: relative;
+    line-height: 8vh; 
+   color:#6D6A62;
+   font-weight: bolder;
+}
+
+.second{
+    background-color: #6D6A62;
+    position: relative;
+    line-height: 8vh; 
+    color: #EB5EA9; 
+    font-weight: bolder;
+}
+
+.third{
+    background-color: #EB5EA9;
+    position: relative;
+    line-height: 8vh;
+    color: #ee9b00;
+    font-weight: bolder;
+    
+}
+
+.first:hover {background-color:#ffd60a  }
+
+.first:active {
+  background-color: #ee9b00 ;
+  box-shadow: 0 5px #eae2b7;
+  transform: translateY(6px);
+}
+
+.second:hover {background-color:#979dac  }
+
+.second:active {
+  background-color: #7d8597 ;
+  /* box-shadow: 0 5px #eae2b7; */
+  transform: translateY(6px);
+}
+
+.third:hover {background-color:#ff8fab }
+
+.third:active {
+  background-color: #ff8fab ;
+  /* box-shadow: 0 5px #eae2b7; */
+  transform: translateY(6px);
+}

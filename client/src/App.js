@@ -10,7 +10,9 @@ import Register from "./pages/Register";
 import HomeAuth from "./pages/HomeAuth";
 import ShelterProfile from './pages/ShelterProfile';
 import Modal from './modal/HomeAuth';
+
 import MatchResults from './pages/MatchResults';
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -30,7 +32,8 @@ function App() {
           <Route path='/dogs' element={<SeeAllDogs api={api} /> } />
           <Route path='/cats' element={<SeeAllCats api={api} />} />
           <Route path='/quiz' element={<Quiz api={api} />} />
-          <Route path='/match' element={<MatchResults api={api}/>}/>
+          <Route path='/match' element={<MatchResults api={api}/>}/>          
+          <Route path='/footer' element={<Footer />} />
         </Routes>
    
    
