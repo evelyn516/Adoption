@@ -1,5 +1,6 @@
 import { default as Collapsible } from '.';
 import { screen, render, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom'
 
 describe('Collapsible', () => {
     let TestAbout = "Troy is an older gent."
