@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Header from "../../layout/Header";
-
+import little_cat from './little_cat.png' 
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 
@@ -147,9 +147,6 @@ function Quiz({api}) {
 
 <img src={little_cat} alt="little_cat" className="little-cat-img"/>
 </div>
-</section>
-
-
           {currentQuestion === questions.length  ? (
             <h1 className="questions">
               {" "}
@@ -160,6 +157,9 @@ function Quiz({api}) {
           )}
         </form>
       </div>
+</section>
+
+
 
     </>
   );
