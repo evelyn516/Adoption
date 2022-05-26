@@ -9,7 +9,7 @@ const SeeAll = ({ animals, type }) => {
             <h1>Meet the {type}</h1>
         </header>
     
-        <main>
+        <main role='main'>
         {animals.map( animal => {
             return <AnimalSnapshot key={animal.ref} animal={animal} />})} 
         </main>  

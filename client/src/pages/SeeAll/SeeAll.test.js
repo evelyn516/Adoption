@@ -54,4 +54,10 @@ describe('SeeAll', () => {
         expect(type).toBeInTheDocument();
         expect(type).toContainHTML("lizard");
     });
+
+    test('it renders the Animal Snapshot', () => {
+        let main = screen.getByRole('main')
+        expect(main).toBeInTheDocument();
+        /* expect(main).toHaveContent/.not.toBeNull?? */;
+    });
 });
