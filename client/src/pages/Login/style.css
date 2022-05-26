@@ -1,13 +1,17 @@
 /* Bordered form */
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Indie+Flower&display=swap');
+
+
 .loginPage {
     border: 3px solid #f1f1f1;
     border-radius: 8%;
-    width:80%;
+    width:90%;
     margin:auto;
     color:white;
     background-color: grey;
-    font-size:15px;
+    font-size:1.8rem;
     margin-top: 50px;
+    font-family: 'Indie Flower', cursive;
   }
   
   /* Full-width inputs */
@@ -18,6 +22,9 @@
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.7rem;
+    text-align: center;
   }
   
   /* Set a style for all buttons */
@@ -29,6 +36,7 @@
     border: none;
     cursor: pointer;
     width: 100%;
+    font-family: 'Indie Flower', cursive;
   }
   
   /* Add a hover effect for buttons */
@@ -45,7 +53,7 @@
   
   /* Avatar image */
   img.avatar {
-    width: 40%;
+    width: 10rem;
     border-radius: 50%;
   }
   
@@ -61,5 +69,6 @@
   }
 
   .remember_forgot{
+    font-size: 18px;
       padding-top: 20px;
   }

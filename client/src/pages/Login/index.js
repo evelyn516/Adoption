@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import Header from '../../layout/Header';
 import Cookies from 'js-cookie';
 import './style.css'
+import dog_running from './dog_running.png'
 
 function Login({api}) {
   const dispatch = useDispatch()
@@ -48,7 +49,7 @@ function Login({api}) {
     <Header/>
     <form className='loginPage' onSubmit={handleSubmit}>
       <div class="imgcontainer">
-      <img src="https://metaversedogcrypto.com/user/assets/img/login%20(1).png" alt="Avatar" class="avatar"/>
+      <img src={dog_running} alt="dog-running" class="avatar"/>
       </div>
       <div className="loginContainer">
         <label htmlFor='username'><b>Username</b></label>
