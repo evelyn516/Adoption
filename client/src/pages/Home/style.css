@@ -20,7 +20,7 @@ font-weight:100;
 }
 
 .btn-container{
-margin: 5rem 0 3.8rem 0;
+margin:4.5rem 0 4.5rem 0;
 display: flex;
 flex-direction: column;
 }
@@ -109,7 +109,7 @@ font-family: 'Indie Flower', cursive;
     background-color: #EB5EA9;
     position: relative;
     line-height: 8vh;
-    color: #ee9b00;
+    color: #665d4e;
     font-weight: bolder;
     
 }

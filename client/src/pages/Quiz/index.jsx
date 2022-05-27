@@ -123,18 +123,18 @@ function Quiz({api}) {
   //   )
   //   ()
   // }
-
+  console.log(questions[currentQuestion])
   return (
     <>
     <Header/>
     <section className="questions-grid">
 
-      <h1 className="questions"> {questions[currentQuestion].question}</h1>
+      <h1 className="questions"><span>{currentQuestion+1}.</span> {questions[currentQuestion].question}</h1>
 
       <div className="answers-grid">
         <form onSubmit={nextQuestion}>
           <select className="category" name="selector" onChange={handleChange}>
-            <option className="single-opt">select one answer</option>
+            <option className="single-opt" hidden>select one answer</option>
 
             {questions[currentQuestion].answers &&
               questions[currentQuestion].answers.map((answer) => (

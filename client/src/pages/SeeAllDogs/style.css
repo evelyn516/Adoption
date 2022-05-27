@@ -21,9 +21,7 @@ body{
     text-decoration: underline;
 }
 
-.seeAllMain{
-    background-color: rgb(193, 248, 255);
-}
+
 
 .animalProfileName { 
     grid-area: name;
@@ -103,7 +101,7 @@ body{
     box-shadow: 5px 10px 18px #6d6a62ff;
     border-radius: 8pt;
     font-size: 12.5px;
-    margin: 20pt;
+    margin: 10pt 20pt 10pt 20pt;
 }
 
 /* img centre */
