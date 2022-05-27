@@ -14,10 +14,11 @@ background-color: #F3A633;
 
 text-align: center;
 padding: 4rem 1rem 2rem 1rem;
-
-font-size: 2rem;
-
+font-size: 2.5rem;
+margin:0%;
+font-family: 'Indie Flower', cursive;
 }
+
 *, *::after, *::before{
 box-sizing: border-box;   
 }
@@ -52,10 +53,7 @@ font-size: 1.5rem;
 font-family: 'Indie Flower', cursive;
 
 }
-option:nth-child(1), option:nth-child(4) {
-font-weight:bold;
-color: green;
-}
+
 
 single-opt{
 text-align: center;

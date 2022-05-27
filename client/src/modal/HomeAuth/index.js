@@ -76,6 +76,7 @@ function Modal({toggle,setModal, api}) {
         await fetch(`${api}posts/`, options)
         console.log('posted')
         setRefresh(!refresh)
+        window.location.reload()
     }
 
     // const preview = async e => {
@@ -86,7 +87,7 @@ function Modal({toggle,setModal, api}) {
 
   return (
       <>
-    <div style={{display: !toggle ? 'None' : 'Block'}} >
+    <div className='homeAuthModal' style={{display: !toggle ? 'None' : 'Block'}} >
         <form className='addPostPage' onSubmit={handleSubmit} enctype="multipart/form-data">
             <div className='postContainer'>
             <label htmlFor='name'>Name</label>

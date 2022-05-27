@@ -53,7 +53,7 @@ class PostList(APIView):
         serializer = PostsSerializer(data = request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED) ##
+            return Response(serializer.data, status=status.HTTP_201_CREATED) 
         return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
     
 class PostInd(APIView):
@@ -144,7 +144,7 @@ class MatchList(APIView):
         level_3 = []
 
         for pet in db:
-            score = 0
+            score = 1
             for req, values in pet.items(): # mqy hqve to check whether this returns key or vqlue
                 for q in quizData:
                     if values == q:

@@ -25,7 +25,7 @@ const SeeAllDogs = ({api}) => {
     return (
         <>
         <Header/>
-        <header className="seeAllTitle">
+        <header className="title">
             <h1>Meet the Dogs</h1>
         </header>
         <main className="seeAllMain">

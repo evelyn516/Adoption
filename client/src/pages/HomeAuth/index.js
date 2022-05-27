@@ -72,7 +72,7 @@ function Testauth({api}) {
     <Header/>
 
     <h1 id='OrgHeader' >Welcome to the Adopter Organisation Page!</h1>
-    <button onClick={handleButton} >{modal ? 'Close Tab' : 'Add An Animal'}</button>
+    <button onClick={handleButton} className="AddAnAnimal">{modal ? 'Close Tab' : 'Add An Animal'}</button>
     <div><Modal api={api} toggle={modal} setModal={setModal}/></div>
     <div>
       {renderRows()}
