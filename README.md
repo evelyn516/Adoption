@@ -1,10 +1,10 @@
 # Adoption
 A mobile-first app that encourages animal adoption by matching you with animals in your local shelters.
 
-- (https://github.com/evelyn516 "Evelyn Ball")
-- (https://github.com/ikenna98 "Ikenna Agada") 
-- (https://github.com/LuizWebDev "Luiz Melo")
-- (https://github.com/Jaxsan2206 "Jaxsan Sivanesan")
+- [Evelyn Ball](https://github.com/evelyn516)
+- [Ikenna Agada](https://github.com/ikenna98) 
+- [Luiz Melo](https://github.com/LuizWebDev)
+- [Jaxsan Sivanesan](https://github.com/Jaxsan2206)
 
 ### Deployed frontend link
 
