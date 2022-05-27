@@ -1,6 +1,7 @@
-# Adoption
+# Adopter
 A mobile-first app that encourages animal adoption by matching you with animals in your local shelters.
 
+### Contributers:
 - [Evelyn Ball](https://github.com/evelyn516)
 - [Ikenna Agada](https://github.com/ikenna98) 
 - [Luiz Melo](https://github.com/LuizWebDev)
@@ -10,7 +11,7 @@ A mobile-first app that encourages animal adoption by matching you with animals 
 
 ### Deployed backend link
 
-## Installation 
+## Installation from github
 * Git clone the repo
 * cd into your client folder and run `npm install`
 * start the client side with `npm start`
@@ -20,6 +21,16 @@ A mobile-first app that encourages animal adoption by matching you with animals 
 * run `python manage.py runserver` to start the backend 
 
 ## Usage
+### As User
+* From the home page you have the choice of See All Dogs/See All Cats/Match Quiz
+* Click on See All Dogs/See All Cats for lists of dogs and cats profiles in the system
+* Fill out the Match quiz to see the perfect animals for your requirements!
+
+### As Shelter
+* Click on the shelter portal on the home page
+* Register as a new shelter
+* Enter details
+* Add new animals that need adopting
 
 ## Bugs
 
