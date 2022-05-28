@@ -1,0 +1,25 @@
+
+body {
+    text-align: center;
+}
+
+#OrgHeader {
+    font-size: 215%;
+    text-align: center;
+}
+
+.OrgPosts {
+    /* border: 0px solid black; */
+    padding: 5% 10% 5% 10%;
+    margin: 10px;
+    border-radius: 2rem;
+    background-color: #ff8fab;
+}
+
+.OrgPostImg{
+    width: 100%;
+}
+
+#root > button[class='AddAnAnimal']{
+    width:90%;
+}

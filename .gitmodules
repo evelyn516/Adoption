@@ -1,0 +1,3 @@
+[submodule "deployed_server"]
+	path = deployed_server
+	url = https://github.com/ikenna98/lap-4-server

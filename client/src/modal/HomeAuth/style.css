@@ -1,0 +1,96 @@
+/* Bordered form */
+.addPostPage {
+    /* border: 3px solid #f1f1f1;
+    border-radius: 8%;
+    width:80%;
+    margin:auto;
+    color:white;
+    background-color: grey;
+    font-size:15px;
+    margin-top: 50px; */
+    background-color: rgba(0,0,0,0.5);
+    color:#ccc;
+    border-radius: 1rem;
+  }
+
+  #root > button {
+      margin: 10px 0px 0px 0px;
+      width: 100%;
+      float:'right';
+      
+  }
+  
+  /* Full-width inputs */
+  .postContainer > input,.postContainer > select, .postContainer > textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+
+  /* Add a hover effect for buttons */
+  #root > form:nth-child(3) > div:nth-child(2) > button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 0px 0;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 40%;
+  }
+  
+  /* Add padding to containers */
+  .postContainer {
+    padding: 0px 16px 16px 16px;
+    background-color:'#f1f1f1';
+    border-radius:1rem;
+  }
+  
+  #q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8{
+    font-size:1rem;
+    height:3rem;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    font-family: 'Indie Flower', cursive;
+  }
+
+  .file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+  }
+
+  .file-input label {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 30px;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #27954d, #171010);
+    box-shadow: 0 4px 7px rgb(0 0 0 / 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+    margin: 0px auto 10px auto;
+  }
+
+.homeAuthModal{
+  width:90%;
+  margin:auto;
+  border-radius: 1rem;
+}
