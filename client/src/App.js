@@ -16,7 +16,7 @@ import Footer from "./components/Footer"
 
 function App() {
 
-  const api = 'http://127.0.0.1:8000/';
+  const api = 'https://adopter-lap4.herokuapp.com/';
 
   return (
 

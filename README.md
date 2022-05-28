@@ -7,9 +7,11 @@ A mobile-first app that encourages animal adoption by matching you with animals 
 - [Luiz Melo](https://github.com/LuizWebDev)
 - [Jaxsan Sivanesan](https://github.com/Jaxsan2206)
 
-### Deployed frontend link
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2b9211c2-ca7f-4707-866e-d465606e9fbd/deploy-status)](https://app.netlify.com/sites/adopters-lap4/deploys)
 
-### Deployed backend link
+### [Deployed frontend link](https://adopters-lap4.netlify.app/)
+
+### [Deployed backend link](https://adopter-lap4.herokuapp.com/)
 
 ## Installation from github
 * Git clone the repo
